@@ -1,0 +1,184 @@
+.heroContainer {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
+/* .bg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.hImg{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  height: 80%;
+  width: max-content;
+}
+
+.hImg img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+} */
+
+.heroSection {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.hTitle {
+  font-size: 80px;
+  font-weight: bold;
+  background: linear-gradient(to left, #fe4401, #1e90ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: start; /* Optional: Center the text */
+}
+
+.scrollContainer {
+  display: flex;
+  justify-content: end;
+  background-color: black;
+}
+.scroll {
+  margin-bottom: 50px;
+  width: max-content;
+}
+
+.heroSection.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titleBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.titleBox h2 {
+  font-size: 35px;
+}
+
+.titleBox p {
+  font-size: 19px;
+  margin: 20px 0;
+  margin-right: 20px;
+}
+
+.titleBox button {
+  padding-left: 1rem; /* px-4 = 1rem padding-left */
+  padding-right: 1rem; /* px-4 = 1rem padding-right */
+  padding-top: 1rem; /* py-4 = 1rem padding-top */
+  padding-bottom: 1rem; /* py-4 = 1rem padding-bottom */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+  border-radius: 0.5rem; /* rounded-lg = 0.5rem */
+  background-color: black; /* bg-black */
+  color: white; /* text-white */
+  font-weight: 500; /* font-medium */
+  display: inline-flex; /* inline-flex */
+  align-items: center; /* items-center */
+  letter-spacing: -0.02em; /* -tracking-tight */
+}
+
+.titleBox.btn-primary {
+  background-color: white; /* sm:bg-white */
+  color: black; /* sm:text-black */
+}
+
+.titleBox.btn-primary:hover {
+  transform: scale(1.05); /* hover:scale-105 */
+  transition: transform 0.3s ease-in; /* duration-300 ease-in */
+}
+
+.heroSection.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgBox {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background-color: transparent;
+  border-radius: 100%;
+  /* transform: scaleX(-1);  /* Flips the image horizontally */
+  /* display: inline-block; /* Ensures the transform works properly */
+}
+
+.pic {
+  position: absolute;
+  /* background: #000; */
+  /* right: 60%;
+  bottom: 0%;
+  left: 0%; */
+  border-radius: 50%;
+  height: 500px;
+  width: 500px;
+}
+
+/* .bubbleContainer {
+  width: 50%;
+  display: flex;
+  align-items: end;
+  gap: 8px;
+  justify-content: space-between;
+}
+.bubble {
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  color: #555;
+  padding: 24px;
+  font-size: 18px;
+  border-radius: 20px 20px 0px 20px;
+}
+.bubbleContainer img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  object-fit: cover;
+  background-color: #dd4c62;
+} */
+
+.contactLink {
+  margin-bottom: 50px;
+}
+
+.circleText {
+  letter-spacing: 3px;
+  font-size: 20px;
+}
+
+.contactButton {
+  position: relative;
+}
+.arrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

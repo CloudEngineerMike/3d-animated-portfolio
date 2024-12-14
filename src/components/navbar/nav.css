@@ -1,0 +1,143 @@
+header {
+  position: fixed;
+  height: 9vh;
+  z-index: 10;
+  /* background: rgb(1, 38, 95); */
+  width: 100%;
+  transition: all 200ms ease;
+}
+
+.nav-bg {
+  background-color: #240b39; /* Dark background color */
+}
+
+.nav-fixed {
+  position: fixed; /* Fixed positioning */
+}
+
+
+.innerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1536px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.logo {
+  display: flex;
+  /* flex-direction: row; */
+}
+
+.innerContainer img {
+  width: 90px;
+  height: 90px;
+  margin-left: 2px;
+}
+
+.navLinksContainer {
+  display: flex;
+  align-items: center;
+  margin-left: 3rem;
+}
+
+.hideLinks {
+  display: flex;
+  flex-direction: row;
+}
+
+.linkStyle {
+  position: relative;
+  color: inherit; /* Maintain text color */
+  text-decoration: none;
+  font-size: large;
+  font-weight: 500;
+  width: fit-content;
+  display: block;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 6px;
+}
+
+.linkStyle::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px; /* Adjust underline thickness */
+  background-color: yellow;
+  transition: width 0.3s ease-in-out; /* Smooth fade-in effect */
+}
+
+.linkStyle:hover::after {
+  width: 100%;
+}
+
+.btnBox {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  /* margin-left: 5rem; */
+  width: 125px;
+  height: 100px;
+}
+
+.icon {
+  font-size: xx-large;
+  margin-bottom: 0px;
+  margin-left: 25px;
+  /* margin-right: 0px; */
+}
+
+.icon:hover {
+  color: rgb(1, 167, 250);
+  transition-duration: 400ms;
+}
+
+.menu {
+  display: none;
+  width: 24px;
+  height: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* .btn{
+    padding: 10px 35px;
+    color: blue;
+    font-weight: 600;
+    font-size: large;
+    border-radius: 10px;
+    background-color: white;
+} */
+
+@media screen and (max-width: 640px) {
+  .hideLinks {
+    display: none;
+  }
+  .icon {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Adjust for your breakpoint */
+  .menu {
+    display: block; /* Show text on small screens */
+  }
+  .hideLinks {
+    display: none;
+  }
+  .icon {
+    display: none;
+  }
+}
+@media screen and (max-width: 1024px) {
+}
