@@ -1,4 +1,5 @@
 .heroContainer {
+  position: relative;
   height: 100%;
   overflow: hidden;
   display: flex;
@@ -46,15 +47,7 @@
   text-align: start; /* Optional: Center the text */
 }
 
-.scrollContainer {
-  display: flex;
-  justify-content: end;
-  background-color: black;
-}
-.scroll {
-  margin-bottom: 50px;
-  width: max-content;
-}
+
 
 .heroSection.left {
   display: flex;
@@ -103,11 +96,107 @@
   transition: transform 0.3s ease-in; /* duration-300 ease-in */
 }
 
+/* Container styling */
+.btnBox {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+/* Button styling */
+.btnBox button {
+  background-color: #007acc; /* Primary blue color */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  /* cursor: pointer; */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Add spacing between text and icon */
+}
+
+/* Anchor tag styling */
+.btnBox button a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* Hover effects for button */
+.btnBox button:hover {
+  background-color: #005ea6; /* Darker blue for hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Icon sizing (optional if you use Fa icons) */
+.btnBox button a svg {
+  font-size: 1.2rem;
+  color: white;
+}
+/* Responsive design */
+@media (max-width: 768px) {
+  .btnBox {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .btnBox button {
+    width: 100%;
+  }
+}
+
 .heroSection.right {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.heroRightTop{
+  width: 100%;
+  height: 80%;
+  /* background: #000; */
+}
+
+.heroRightBottom{
+  display: flex;
+width: 100%;
+height: 20%;
+/* background-color: #1e90ff; */
+
+}
+
+.scrollBox {
+  display: flex;
+  justify-content:start;
+  align-items: end;
+  height: 100%;
+  width: 75%;
+}
+
+.scrollIcon{
+  position: absolute; /* Allows positioning relative to the closest positioned ancestor */
+  bottom: 10px; /* Adjust the position as needed */
+  left: 727px; /* Adjust the position as needed */
+  margin-bottom: 15px;
+  font-size: 24px; /* Size of the icon */
+  color: red; /* Icon color */
+  z-index: 10; /* Ensures the icon is above other elements */
+}
+
+.contactBox {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
+  width: 25%;
 }
+
 
 .imgBox {
   /* display: flex;
@@ -157,10 +246,6 @@
   background-color: #dd4c62;
 } */
 
-.contactLink {
-  margin-bottom: 50px;
-}
-
 .circleText {
   letter-spacing: 3px;
   font-size: 20px;
@@ -182,3 +267,9 @@
   align-items: center;
   justify-content: center;
 }
+
+/* @media (min-width: 400px) {
+.titleBox{
+  font-size:xx-small;
+}
+} */

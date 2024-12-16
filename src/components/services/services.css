@@ -1,2 +1,165 @@
-.services {
-}
+/* General container styling */
+.expertise-section {
+  display: flex;
+  justify-content: center;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  /* Relative wrapper */
+  .relative {
+    position: relative;
+    margin-top: 100px;
+
+    /* overflow-x: hidden; */
+
+  }
+  
+  /* Expertise image styling */
+  .expertise-image {
+    /* opacity: 0.25; */
+    position: absolute;
+    width: 700px;
+    height: 100%;
+    left: 175px;
+    top: 185px;
+  }
+  
+  @media (min-width: 1024px) {
+    /* .expertise-image {
+      width: 800px;
+      left: 550px;
+      top: 540px;
+    } */
+  }
+  
+  /* Title styling */
+  .expertise-title {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    font-weight: bold;
+    color: white;
+    margin: 2rem 0;
+  }
+  
+  @media (min-width: 768px) {
+    .expertise-title {
+      font-size: 3rem;
+      line-height: 2.5rem;
+      margin: 3rem 0;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .expertise-title {
+      font-size: 3.5rem;
+      line-height: 3rem;
+    }
+  }
+  
+  /* Grid container */
+  .expertise-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 0 auto;
+    max-width: 300px;
+    color: white;
+  }
+  
+  @media (min-width: 768px) {
+    .expertise-grid {
+      grid-template-columns: 1fr 1fr;
+      max-width: 550px;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .expertise-grid {
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 1000px;
+    }
+  }
+  
+  /* Card styles */
+  .expert-card {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    border: 1px solid gray;
+  }
+  
+  .card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .icon {
+    width: 2rem;
+    font-size: 2rem;
+  }
+  
+  .card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: 1rem;
+  }
+  
+  .highlight-pink {
+    border-bottom: 4px solid #ec4899;
+  }
+  
+  /* Card body */
+  .card-body .code-tag {
+    color: #8a657e;
+    font-size: 0.8rem;
+    padding: 0.5rem 0;
+  }
+  
+  .card-content {
+    border-left: 1px solid #6b7280;
+    margin-left: 1rem;
+    padding-left: 1rem;
+  }
+  
+  .card-content p {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .icon {
+      width: 3rem;
+      font-size: 3rem;
+    }
+  
+    .card-title {
+      font-size: 1.5rem;
+    }
+  
+    .card-content p {
+      font-size: 1.1rem;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .icon {
+      width: 4rem;
+      font-size: 4rem;
+    }
+  
+    .card-title {
+      font-size: 2rem;
+    }
+  
+    .highlight-pink {
+      border-bottom-width: 6px;
+    }
+  
+    .card-content p {
+      font-size: 1.2rem;
+    }
+  }
+  
