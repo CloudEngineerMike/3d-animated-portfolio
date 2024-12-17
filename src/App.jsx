@@ -3,6 +3,7 @@ import Services from "./components/services/Services";
 import Portfolio from "./components/portfolio/Portfolio";
 import Contact from "./components/contact/Contact";
 import ResponsiveNav from "./components/navbar/ResponsiveNav";
+import About from "./components/about/About";
 // import AnimatedCursor from "react-animated-cursor";
 
 const App = () => {
@@ -28,13 +29,14 @@ const App = () => {
           <section id="expertise">
             <Services />
           </section>
-          <section id="portfolio">
-            <Portfolio />
-          </section>
-          {/* <section id="#about">
+
+          <section id="about">
           <About />
         </section>
-        <section id="#testimonials">
+          {/* <section id="portfolio"> */}
+            <Portfolio />
+          {/* </section> */}
+        {/* <section id="#testimonials">
           <Testimonials />
         </section> */}
           <section id="contact">

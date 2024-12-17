@@ -10,7 +10,7 @@ const ComputerModelContainer = () => {
             <Stage environment="apartment" intensity={0.5}>
             <ComputerModel/>
             </Stage>
-            <OrbitControls enableZoom={false} />
+            <OrbitControls enableZoom={false} autoRotate/>
             <PerspectiveCamera position={[-4,1,3]} zoom={0.7} makeDefault />
         </Suspense>
     </Canvas>

@@ -10,6 +10,7 @@ import { motion } from "motion/react";
 import styled from "styled-components";
 import HeroBgAnimation from "../HeroBgAnimation";
 import ComputerModelContainer from "../services/computer/ComputerModelContainer";
+import { GrDownload } from "react-icons/gr";
 
 const HeroBg = styled.div`
   position: absolute;
@@ -46,7 +47,9 @@ const awardVariants = {
   },
 };
 
+
 const Hero = () => {
+
   return (
     <div className="heroContainer">
       <div className="heroSection left">
@@ -73,12 +76,24 @@ const Hero = () => {
               web and mobile applications.
             </motion.p>
           </motion.div>
+          <div>
+            <button className="btn btn-primary">
+              <a
+                href="/cv.pdf"
+                download="MikeGSmith_Resume"
+                target="_blank"
+                className="sm:text-xs md:text-base lg:text-base"
+              >
+                Download Resume
+              </a>
+              <div className="iconStyle">
+                <GrDownload />
+              </div>
+            </button>
+          </div>
 
           {/* <div className="btnBox">
-            <button>
-              <a href="">Resume</a>
-              <GrDownload size={15} />
-            </button>
+
             <a
               href="https://www.linkedin.com/in/michael-g-smith-9b9677120/"
               target="_blank"
