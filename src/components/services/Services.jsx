@@ -1,85 +1,33 @@
-import "./services.css";
-import { FaComputer } from "react-icons/fa6";
-import { FaReact } from "react-icons/fa";
-import { MdAutorenew } from "react-icons/md";
-
+import { FaNodeJs } from "react-icons/fa";
 
 const Services = () => {
   return (
-<div id="#expertise" className="expertise-section">
-  <div className="relative overflow-x-clip">
-    <div className="hidden-md">
-      <img
-        src="./dadjoke.svg"
-        alt=""
-        className="expertise-image"
-      />
+    <div id="expertise" className="container h-screen lg:pt-32">
+      <div className="flex flex-col justify-center w-full">
+        <h2 className="section-title px-2">Skills.</h2>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 w-[80%] mx-auto items-center mt-10">
+        {/* Card Component */}
+        <div className="flex flex-col items-center justify-center bg-gray-800 border border-gray-700 rounded-lg shadow-lg p-6 lg:w-[450px] ">
+          {/* <!-- Card Header --> */}
+          <h2 className="text-white text-2xl font-bold mb-4 text-center">
+            BackEnd
+          </h2>
+
+          {/* <!-- Mini Grid --> */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 ">
+            {/* <!-- Mini Cards --> */}
+            <div className="bg-gray-800 p-3 border-gray-700 border-2 rounded-xl shadow-md flex items-center justify-center col-span-2">
+              <div className="flex justify-center items-center  text-white font-medium">
+                <FaNodeJs />
+                <p className="ml-1">Node Js</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  );
+};
 
-    <h2 className="expertise-title">
-      My Expertise.
-    </h2>
-
-    <div className="expertise-grid">
-      {/* <!-- Card 1 --> */}
-      <div className="expert-card">
-        <div className="card-header">
-          <i className="icon fa fa-computer"><FaComputer/></i>
-          <h2 className="card-title">
-            <span className="highlight-pink">Software</span> Development
-          </h2>
-        </div>
-        <div className="card-body">
-          <p className="code-tag">&lt;h3&gt;</p>
-          <div className="card-content">
-            <p>
-              Experienced in both functional and OOP: Python, JavaScript,
-              TypeScript, Swift.
-            </p>
-          </div>
-          <p className="code-tag">&lt;/h3&gt;</p>
-        </div>
-      </div>
-      {/* <!-- Card 2 --> */}
-      <div className="expert-card">
-        <div className="card-header">
-          <i className="icon fa fa-computer"><FaReact/></i>
-          <h2 className="card-title">
-            <span className="highlight-pink">Full-Stack</span> Engineering
-          </h2>
-        </div>
-        <div className="card-body">
-          <p className="code-tag">&lt;h3&gt;</p>
-          <div className="card-content">
-            <p>
-            Passionate about UI/UX. Over 5 years of front-end development experience in HTML, CSS, JS, Angular, React and NextJS frameworks.
-            </p>
-          </div>
-          <p className="code-tag">&lt;/h3&gt;</p>
-        </div>
-      </div>
-      {/* <!-- Card 3 --> */}
-      <div className="expert-card">
-        <div className="card-header">
-          <i className="icon fa fa-computer"><MdAutorenew/></i>
-          <h2 className="card-title">
-            <span className="highlight-pink">Cloud</span> Automation
-          </h2>
-        </div>
-        <div className="card-body">
-          <p className="code-tag">&lt;h3&gt;</p>
-          <div className="card-content">
-            <p>
-            Skilled in designing cloud automation and cross-platform solutions using AWS and Azure.
-            </p>
-          </div>
-          <p className="code-tag">&lt;/h3&gt;</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>  )
-}
-
-export default Services
+export default Services;

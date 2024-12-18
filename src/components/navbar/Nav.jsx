@@ -1,8 +1,7 @@
 "use client";
 import "./nav.css";
 import { navLinks } from "../../constant/constant";
-import { FaLinkedin } from "react-icons/fa";
-import { FaSquareGithub } from "react-icons/fa6";
+import { ctaButton } from "../../constant/constant";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
@@ -31,7 +30,6 @@ const Nav = () => {
       <div className="innerContainer">
         {/* LOGO */}
         <a href="/" className="logo">
-          {/* <img src="./test2.svg" alt=""  /> */}
           <motion.img
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -42,36 +40,36 @@ const Nav = () => {
         </a>
         {/* Nav Links */}
         <div className="navLinksContainer">
-          <div className="hideLinks">
+          <div className="responsiveLinks">
             {navLinks.map((navLink) => {
               return (
                 <a key={navLink.id} href={navLink.url}>
-                  <motion.p  initial={{ x: 100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1 }} className="linkStyle">{navLink.label}</motion.p>
+                  <motion.p
+                    initial={{ x: 100, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 1 }}
+                    className="linkStyle"
+                  >
+                    {navLink.label}
+                  </motion.p>
+                </a>
+              );
+            })}
+            {ctaButton.map((navLink) => {
+              return (
+                <a key={navLink.id} href={navLink.url}>
+                  <motion.p
+                    initial={{ x: 100, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 1 }}
+                    className="ctaLinkStyle border"
+                  >
+                    {navLink.label}
+                  </motion.p>
                 </a>
               );
             })}
           </div>
-          {/* Buttons */}
-          {/* <div className="btnBox">
-            <a
-              href="https://www.linkedin.com/in/michael-g-smith-9b9677120/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="icon"
-            >
-              <FaLinkedin />
-            </a>
-            <a
-              href="https://github.com/CloudEngineerMike"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="icon"
-            >
-              <FaSquareGithub />
-            </a>
-          </div> */}
           <RxHamburgerMenu className="menu" />
         </div>
       </div>

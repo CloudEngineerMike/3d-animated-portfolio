@@ -24,9 +24,12 @@ export const navLinks = [
     url: "/#testimonials",
     label: "Testimonials",
   },
-  {
-    id: 6,
-    url: "/#contact",
-    label: "Contact",
-  },
 ];
+
+export const ctaButton = [
+  {
+    id: 1,
+    url: "/#contact",
+    label: "Hire Me",
+  },
+]

@@ -1,17 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
-html{
+html {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
 }
 
 body {
   scroll-behavior: smooth;
-  /* background: linear-gradient(to bottom, black, #09244e, #09244e); */
   background: linear-gradient(to bottom, #2d04c0, #2f204e);
   color: white;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -24,62 +27,19 @@ a {
   color: white;
 }
 
-.container {
-  max-width: 1536px;
-  padding-left: 16px;
-  padding-right: 16px; 
-  margin-left: auto;
-  margin-right: auto;
+.section-title {
+  @apply text-center sm:text-2xl md:text-3xl lg:text-[44px] md:leading-[60px] font-bold tracking-tighter text-white;
 }
 
-
-section {
-  height: 100vh;
-  scroll-snap-align: center;
+.section-description {
+  @apply text-center sm:text-sm md:text-lg lg:text-[22px] leading-[30px] tracking-tight text-white;
 }
 
-/* section:nth-child(1){
-  background-color: #2f204e;
+.card {
+  @apply sm:p-10 lg:p-8 border border-[#222222]/10 rounded-3xl shadow-[0_7px_14px_#EAEAEA] max-w-xs w-full bg-white text-black;
 }
-section:nth-child(2){
-  background-color: #054fee;
-}
-section:nth-child(3){
-  background-color: #0ab432;
-}
-section:nth-child(4){
-  background-color: #8f1a0d;
-} */
 
+.expert-card {
+  @apply sm:p-4 md:p-4 lg:p-6 border border-gray-300  max-w-xs w-full;
+}
 
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-  .cursor{
-    display: none;
-  }
-}
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-  .cursor{
-    display: block;
-  }
-}
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
-}
