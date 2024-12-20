@@ -1,29 +1,8 @@
-import "./hero.css";
+import "./home.css";
 import { motion } from "motion/react";
-// import styled from "styled-components";
-// import HeroBgAnimation from "../HeroBgAnimation";
 import ComputerModelContainer from "../services/computer/ComputerModelContainer";
 import { GrDownload } from "react-icons/gr";
 
-// const HeroBg = styled.div`
-//   position: absolute;
-//   display: flex;
-//   top: 70%;
-//   right: 0;
-//   bottom: 0;
-//   left: 50%;
-//   width: 100%;
-//   height: 100%;
-//   max-width: 1360px;
-//   justify-content: end;
-//   -webkit-transform: translateX(-50%) translateY(-50%);
-//   transform: translateX(-50%) translateY(-50%);
-
-//   @media (max-width: 960px) {
-//     justify-content: center;
-//     padding: 0 0px;
-//   }
-// `;
 
 const awardVariants = {
   initial: {
@@ -41,7 +20,7 @@ const awardVariants = {
 };
 
 
-const Hero = () => {
+const Home = () => {
 
   return (
     <div className="heroContainer">
@@ -108,9 +87,6 @@ const Hero = () => {
       </div>
       <div className="heroSection right">
         <div className="heroRightTop">
-          {/* <HeroBg>
-            <HeroBgAnimation />
-          </HeroBg> */}
 
           <ComputerModelContainer/>
         </div>
@@ -161,4 +137,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Home;

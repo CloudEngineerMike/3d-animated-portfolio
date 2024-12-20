@@ -33,6 +33,29 @@ import { SiDiagramsdotnet } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { SiXcode } from "react-icons/si";
 import { SiPostman } from "react-icons/si";
+import { FaLinux } from "react-icons/fa";
+import { SiHostinger } from "react-icons/si";
+import { SiAwslambda } from "react-icons/si";
+import YearUp from "../assets/yu.png";
+import GE from "../assets/ge.png";
+import html from "../assets/html.png";
+import css from "../assets/css.png";
+import figma from "../assets/figma.png";
+import nodejs from "../assets/nodejs.png";
+import reactjs from "../assets/reactjs.png";
+import typescript from "../assets/typescript.png";
+import javascript from "../assets/javascript.png";
+import tailwind from "../assets/tailwind.png";
+import aws from "../assets/aws.png";
+import azure from "../assets/azure.png";
+import next from "../assets/next.png";
+import python from "../assets/python.png";
+import terraform from "../assets/terraform.png";
+import postman from "../assets/postman.png";
+import docker from "../assets/docker.png"
+
+
+
 
 export const navLinks = [
   {
@@ -42,21 +65,26 @@ export const navLinks = [
   },
   {
     id: 2,
-    url: "/#expertise",
-    label: "Expertise",
-  },
-  {
-    id: 3,
-    url: "/#portfolio",
-    label: "Portfolio",
-  },
-  {
-    id: 4,
     url: "/#about",
     label: "About",
   },
   {
+    id: 3,
+    url: "/#experience",
+    label: "Experience",
+  },
+  {
+    id: 4,
+    url: "/#skills",
+    label: "Skills",
+  },
+  {
     id: 5,
+    url: "/#portfolio",
+    label: "Portfolio",
+  },
+  {
+    id: 6,
     url: "/#testimonials",
     label: "Testimonials",
   },
@@ -76,17 +104,17 @@ export const skillCards = [
     title: "Front-End",
     cardItems: [
       {
-        name: "React Js",
+        name: "React",
         icon: <FaReact />,
         color: "text-blue-400",
       },
       {
-        name: "Next Js",
+        name: "Next.js",
         icon: <SiNextdotjs />,
         color: "text-black",
       },
       {
-        name: "Angular Js",
+        name: "Angular",
         icon: <FaAngular />,
         color: "text-red-500",
       },
@@ -115,7 +143,6 @@ export const skillCards = [
         icon: <FaSwift />,
         color: "text-blue-600",
       },
-
     ],
   },
   {
@@ -133,7 +160,7 @@ export const skillCards = [
         color: "text-blue-400",
       },
       {
-        name: "Node Js",
+        name: "Node.js",
         icon: <FaNodeJs />,
         color: "text-green-400",
       },
@@ -159,11 +186,15 @@ export const skillCards = [
         color: "text-orange-700",
       },
       {
-        name: "APIGateway",
+        name: "API",
         icon: <SiAmazonapigateway />,
         color: "text-orange-400",
       },
-
+      {
+        name: "Linux",
+        icon: <FaLinux />,
+        color: "text-white",
+      },
     ],
   },
   {
@@ -196,7 +227,7 @@ export const skillCards = [
         color: "text-orange-400",
       },
       {
-        name: "CI/CD",
+        name: "DevOps",
         icon: <VscAzure />,
         color: "text-blue-400",
       },
@@ -205,12 +236,11 @@ export const skillCards = [
         icon: <FaKeycdn />,
         color: "text-orange-600",
       },
-
     ],
   },
   {
     id: 4,
-    title: "Languages & Scripting",
+    title: "Languages",
     cardItems: [
       {
         name: "Python",
@@ -275,7 +305,7 @@ export const skillCards = [
         color: "text-orange-500",
       },
       {
-        name: "VS Code",
+        name: "VSCode",
         icon: <VscVscode />,
         color: "text-blue-500",
       },
@@ -290,10 +320,245 @@ export const skillCards = [
         color: "text-orange-500",
       },
       {
-        name: "Postman",
-        icon: <SiPostman />,
-        color: "text-orange-500",
+        name: "Hostinger",
+        icon: <SiHostinger />,
+        color: "text-indigo-500",
       },
     ],
   },
 ];
+
+export const projectData = [
+  {
+    id: 1,
+    title: "Blob Questor",
+    desc: "Cloud inventory API automation using PowerShell and Python for Azure data integration.",
+    img: "/blobfish.jpg",
+    link: "/query-quest",
+    technologies: [
+      {
+        icon: <FaAws />,
+        color: "text-orange-400",
+      },
+      {
+        icon: <VscAzure />,
+        color: "text-blue-400",
+      },
+      {
+        icon: <SiAwslambda />,
+        color: "text-orange-400",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Index Request Automator",
+    desc: "Designed an automation service improving UI/API access authorization, reducing manual processing by 65%.",
+    img: "/keys.jpg",
+    link: "/cloud-index-authorizer",
+    technologies: [
+      {
+        icon: <FaAws />,
+        color: "text-orange-400",
+      },
+      {
+        icon: <VscAzure />,
+        color: "text-blue-400",
+      },
+      {
+        icon: <SiAwslambda />,
+        color: "text-orange-400",
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "Onboarding Pipeline",
+    desc: "Developed an AWS pipeline automating employee access, enhancing compliance, and accelerating processes by 85%.",
+    img: "/onboarding.jpg",
+    link: "/",
+    technologies: [
+      {
+        icon: <FaAws />,
+        color: "text-orange-400",
+      },
+      {
+        icon: <VscAzure />,
+        color: "text-blue-400",
+      },
+      {
+        icon: <SiAwslambda />,
+        color: "text-orange-400",
+      },
+    ],
+  },
+
+  {
+    id: 4,
+    title: "KPI Dashboard",
+    desc: "Developed an Onboarding Pipeline using Step Functions, Lambda, and DynamoDB, reducing onboarding time by 85%.",
+    img: "/kpi.jpg",
+    link: "/kpi-dashboard",
+    technologies: [
+      {
+        icon: <FaAws />,
+        color: "text-orange-400",
+      },
+      {
+        icon: <VscAzure />,
+        color: "text-blue-400",
+      },
+      {
+        icon: <SiAwslambda />,
+        color: "text-orange-400",
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "Deploy Dash",
+    desc: "Engineered a custom CI/CD pipeline with AWS CodePipeline for optimized development, testing, and deployment.",
+    img: "/dd.jpg",
+    link: "/deploy-dash",
+    technologies: [
+      {
+        icon: <FaAws />,
+        color: "text-orange-400",
+      },
+      {
+        icon: <VscAzure />,
+        color: "text-blue-400",
+      },
+      {
+        icon: <SiAwslambda />,
+        color: "text-orange-400",
+      },
+    ],
+  },
+];
+
+export const experiences = [
+  {
+    title: "Senior Software Engineer",
+    company_name: "General Electric | Corporate",
+    icon: GE,
+    iconBg: "#00003D",
+    date: "Jan 2019 - Present",
+    pointsColor: "#FFFFFF",
+    points: [
+      "Developed and optimized cloud-based solutions for data integration, cross-platform analytics, and automation of key processes across AWS and Azure.",
+      "Led technical initiatives like automated authentication services and employee onboarding pipelines, enhancing efficiency and security.",
+      "Oversaw application migrations, React.Js code audits, and mentoring of junior developers to ensure smooth transitions, quality control, and better team performance.",
+      "Implemented containerization with Docker and CI/CD pipelines to streamline development workflows, improving productivity and system reliability."
+    ],
+  },
+  {
+    title: "Software Engineering Specialist",
+    company_name: "General Electric | Digital",
+    icon: GE,
+    iconBg: "#0F172A",
+    date: "Oct 2017 - Dec 2018",
+    pointsColor: "text-white",
+
+    points: [
+      "Designed and deployed cloud-based solutions using Angular, Terraform, and Azure DevOps to improve data accessibility and operational performance.",
+      "Participated in Azure cloud migrations and optimized resource allocation to lower operational costs and enhance infrastructure scalability and security.",
+      "Maintained technical documentation and conducted knowledge transfers to streamline onboarding and increase team productivity.",
+      "Automated infrastructure management tasks, reducing manual intervention and speeding up system deployments across cloud platforms."
+    ],
+  },
+  {
+    title: "Network Engineer (Internship)",
+    company_name: "General Electric | Digital",
+    icon: GE,
+    iconBg: "#1E293B",
+    date: "Feb 2017 - Sept 2017",
+    pointsColor: "text-white",
+    points: [
+      "Assisted in configuring and maintaining Cisco network equipment, including switches and routers, to support network infrastructure.",
+      "Gained hands-on experience with port security, IP protocols, subnetting, and routing, enhancing network performance and security.",
+      "Supported troubleshooting efforts and network optimization, ensuring reliable communication and connectivity across company systems.",
+    ],
+  },
+  {
+    title: "Desktop Support Technician",
+    company_name: "Year Up United",
+    icon: YearUp,
+    iconBg: "#6B21A8",
+    date: "Sept 2016 - July 2017",
+    pointsColor: "text-white",
+    points: [
+      "Provided technical support for hardware and software, troubleshooting issues, and maintaining systems to ensure smooth operations.",
+      "Gained hands-on experience with computer installations, diagnostics, repairs, and upgrades, contributing to overall system efficiency.",
+      "Delivered support for internal and external clients, honing problem-solving and communication skills in a fast-paced environment.",
+    ],
+  },
+];
+
+export const technologies = [
+  {
+    name: "React JS",
+    icon: reactjs,
+  },
+  {
+    name: "Next JS",
+    icon: next,
+  },
+
+  {
+    name: "HTML 5",
+    icon: html,
+  },
+  {
+    name: "CSS 3",
+    icon: css,
+  },
+  {
+    name: "Tailwind CSS",
+    icon: tailwind,
+  },
+
+  {
+    name: "JavaScript",
+    icon: javascript,
+  },
+  {
+    name: "TypeScript",
+    icon: typescript,
+  },
+  {
+    name: "Node JS",
+    icon: nodejs,
+  },
+  {
+    name: "Python",
+    icon: python,
+  },
+
+  {
+    name: "AWS",
+    icon: aws,
+  },
+  {
+    name: "Azure",
+    icon: azure,
+  },
+  {
+    name: "Docker",
+    icon: docker,
+  },
+
+  {
+    name: "Figma",
+    icon: figma,
+  },
+  {
+    name: "Terraform",
+    icon: terraform,
+  },
+  {
+    name: "Postman",
+    icon: postman,
+  },
+
+]

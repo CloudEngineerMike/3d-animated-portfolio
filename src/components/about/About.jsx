@@ -1,13 +1,8 @@
-import "./about.css"
+import React from 'react'
 
 const About = () => {
   return (
-    <div >
-      <div className="text-6xl">hey world</div>
-      <p className="text-3xl font-bold underline text-red-800">
-      Hello world!
-    </p>
-    </div>
+    <div>About</div>
   )
 }
 
