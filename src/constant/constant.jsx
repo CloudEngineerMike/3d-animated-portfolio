@@ -40,21 +40,20 @@ import YearUp from "../assets/yu.png";
 import GE from "../assets/ge.png";
 import html from "../assets/html.png";
 import css from "../assets/css.png";
-import figma from "../assets/figma.png";
 import nodejs from "../assets/nodejs.png";
 import reactjs from "../assets/reactjs.png";
 import typescript from "../assets/typescript.png";
 import javascript from "../assets/javascript.png";
-import tailwind from "../assets/tailwind.png";
 import aws from "../assets/aws.png";
 import azure from "../assets/azure.png";
 import next from "../assets/next.png";
 import python from "../assets/python.png";
 import terraform from "../assets/terraform.png";
-import postman from "../assets/postman.png";
-import docker from "../assets/docker.png"
-
-
+import docker from "../assets/docker.png";
+import web from "../assets/web.png";
+import mobile from "../assets/mobile.png";
+import backend from "../assets/backend.png";
+import creator from "../assets/creator.png";
 
 
 export const navLinks = [
@@ -104,14 +103,14 @@ export const skillCards = [
     title: "Front-End",
     cardItems: [
       {
-        name: "React",
+        name: "React Js",
         icon: <FaReact />,
         color: "text-blue-400",
       },
       {
-        name: "Next.js",
+        name: "Next Js",
         icon: <SiNextdotjs />,
-        color: "text-black",
+        color: "text-white",
       },
       {
         name: "Angular",
@@ -170,23 +169,23 @@ export const skillCards = [
         icon: <SiAmazondynamodb />,
         color: "text-blue-400",
       },
-      {
-        name: "MySQL",
-        icon: <GrMysql />,
-        color: "text-blue-700",
-      },
-      {
-        name: "Firebase",
-        icon: <IoLogoFirebase />,
-        color: "text-orange-400",
-      },
+      // {
+      //   name: "MySQL",
+      //   icon: <GrMysql />,
+      //   color: "text-blue-700",
+      // },
+      // {
+      //   name: "Firebase",
+      //   icon: <IoLogoFirebase />,
+      //   color: "text-orange-400",
+      // },
       {
         name: "S3",
         icon: <SiAmazons3 />,
         color: "text-orange-700",
       },
       {
-        name: "API",
+        name: "API Gateway",
         icon: <SiAmazonapigateway />,
         color: "text-orange-400",
       },
@@ -202,7 +201,7 @@ export const skillCards = [
     title: "DevOps",
     cardItems: [
       {
-        name: "GitHub",
+        name: "GitHub & Actions",
         icon: <FaGithub />,
         color: "text-white",
       },
@@ -226,13 +225,13 @@ export const skillCards = [
         icon: <FaAws />,
         color: "text-orange-400",
       },
+      // {
+      //   name: "DevOps",
+      //   icon: <VscAzure />,
+      //   color: "text-blue-400",
+      // },
       {
-        name: "DevOps",
-        icon: <VscAzure />,
-        color: "text-blue-400",
-      },
-      {
-        name: "CDN",
+        name: "CodePipeline",
         icon: <FaKeycdn />,
         color: "text-orange-600",
       },
@@ -268,16 +267,16 @@ export const skillCards = [
         icon: <SiGnubash />,
         color: "text-white",
       },
-      {
-        name: "YAML",
-        icon: <SiYaml />,
-        color: "text-red-500",
-      },
-      {
-        name: "JSON",
-        icon: <LuFileJson2 />,
-        color: "text-white",
-      },
+      // {
+      //   name: "YAML",
+      //   icon: <SiYaml />,
+      //   color: "text-red-500",
+      // },
+      // {
+      //   name: "JSON",
+      //   icon: <LuFileJson2 />,
+      //   color: "text-white",
+      // },
       {
         name: "Swift",
         icon: <GrSwift />,
@@ -449,7 +448,7 @@ export const experiences = [
       "Developed and optimized cloud-based solutions for data integration, cross-platform analytics, and automation of key processes across AWS and Azure.",
       "Led technical initiatives like automated authentication services and employee onboarding pipelines, enhancing efficiency and security.",
       "Oversaw application migrations, React.Js code audits, and mentoring of junior developers to ensure smooth transitions, quality control, and better team performance.",
-      "Implemented containerization with Docker and CI/CD pipelines to streamline development workflows, improving productivity and system reliability."
+      "Implemented containerization with Docker and CI/CD pipelines to streamline development workflows, improving productivity and system reliability.",
     ],
   },
   {
@@ -464,7 +463,7 @@ export const experiences = [
       "Designed and deployed cloud-based solutions using Angular, Terraform, and Azure DevOps to improve data accessibility and operational performance.",
       "Participated in Azure cloud migrations and optimized resource allocation to lower operational costs and enhance infrastructure scalability and security.",
       "Maintained technical documentation and conducted knowledge transfers to streamline onboarding and increase team productivity.",
-      "Automated infrastructure management tasks, reducing manual intervention and speeding up system deployments across cloud platforms."
+      "Automated infrastructure management tasks, reducing manual intervention and speeding up system deployments across cloud platforms.",
     ],
   },
   {
@@ -513,10 +512,10 @@ export const technologies = [
     name: "CSS 3",
     icon: css,
   },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
+  // {
+  //   name: "Tailwind CSS",
+  //   icon: tailwind,
+  // },
 
   {
     name: "JavaScript",
@@ -548,17 +547,36 @@ export const technologies = [
     icon: docker,
   },
 
-  {
-    name: "Figma",
-    icon: figma,
-  },
+  // {
+  //   name: "Figma",
+  //   icon: figma,
+  // },
   {
     name: "Terraform",
     icon: terraform,
   },
+  // {
+  //   name: "Postman",
+  //   icon: postman,
+  // },
+];
+
+export const services = [
   {
-    name: "Postman",
-    icon: postman,
+    title: "Software Engineer",
+    icon: mobile,
+  },
+  {
+    title: "Cloud Automation",
+    icon: creator,
+  },
+  {
+    title: "Backend Engineer",
+    icon: backend,
   },
 
-]
+  {
+    title: "Frontend Developer",
+    icon: web,
+  },
+];

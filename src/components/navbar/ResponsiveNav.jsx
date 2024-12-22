@@ -3,7 +3,7 @@ import Nav from "./Nav";
 
 const ResponsiveNav = () => {
   return (
-    <div>
+    <div >
       <Nav/>
       {/* <MobileNav/> */}
     </div>

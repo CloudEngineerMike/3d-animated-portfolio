@@ -7,7 +7,7 @@ header {
 }
 
 .nav-bg {
-  background-color: #0F172A; /* Dark background color */
+  background-color: #090172; /* Dark background color */
 }
 
 .nav-fixed {
@@ -21,7 +21,7 @@ header {
   align-items: center;
   height: 100%;
   justify-content: space-between;
-  width: 95%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   max-width: 1536px;
@@ -71,7 +71,7 @@ header {
   bottom: 0;
   width: 0;
   height: 2px; /* Adjust underline thickness */
-  background-color: yellow;
+  background-color: green;
   transition: width 0.3s ease-in-out; /* Smooth fade-in effect */
 }
 
@@ -84,7 +84,7 @@ header {
   color: inherit; /* Maintain text color */
   text-decoration: none;
   font-size: large;
-  font-weight: 300;
+  font-weight: bold;
   width: fit-content;
   display: block;
   margin-left: 10px;
@@ -93,10 +93,12 @@ header {
   /* background-color: white; */
   color: white;
   border-radius: 5px;
+  border-color: rgb(216, 244, 2);
+  border-radius: 25px;
 }
 
 .ctaLinkStyle:hover{
-  background-color: rgb(216, 244, 2);
+  background-color: rgb(62, 185, 5);
   transition: background-color 0.3s ease, transform 0.2s ease;
   color: black;
 }

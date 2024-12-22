@@ -40,7 +40,7 @@ const Nav = () => {
         </a>
         {/* Nav Links */}
         <div className="navLinksContainer">
-          <div className="responsiveLinks">
+          <div className="responsiveLinks sm:hidden">
             {navLinks.map((navLink) => {
               return (
                 <a key={navLink.id} href={navLink.url}>

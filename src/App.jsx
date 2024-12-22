@@ -1,62 +1,82 @@
-import Home from "./components/home/Home";
-import Services from "./components/services/Services";
-// import Portfolio from "./components/portfolio/Portfolio";
-import Contact from "./components/contact/Contact";
-import ResponsiveNav from "./components/navbar/ResponsiveNav";
-import About from "./components/about/About";
-import AnimatedCursor from "react-animated-cursor";
-import Experience from "./components/experience/Experience";
-import Tech from "./components/tech/tech";
+import LazyLoad from "react-lazyload";
+import { lazy, Suspense } from "react";
+import Starfield from "react-starfield";
+
+const ResponsiveNav = lazy(() => import("./components/navbar/ResponsiveNav"));
+const Home = lazy(() => import("./components/home/Home"));
+const About = lazy(() => import("./components/about/About"));
+const Experience = lazy(() => import("./components/experience/Experience"));
+const Tech = lazy(() => import("./components/tech/tech"));
+const Services = lazy(() => import("./components/services/Services"));
+const Contact = lazy(() => import("./components/contact/Contact"));
 
 const App = () => {
   return (
-    <div className="sm:cursor-none">
-      <AnimatedCursor
-        innerSize={8}
-        outerSize={35}
-        innerScale={2}
-        outerScale={2}
-        outerAlpha={0}
-        innerStyle={{ backgroundColor: "gold" }}
-        outerStyle={{
-          border: "3px solid gold",
-        }}
-      />
+    <div className="">
+      
+      {/* <Starfield
+        starCount={1000}
+        starColor={[255, 255, 255]}
+        speedFactor={0.05}
+        backgroundColor="black"
+        className="z-0"
+      /> */}
 
-      <ResponsiveNav />
+      <Suspense fallback={<div>Loading...</div>}>
+        <LazyLoad>
+          <section>
+            <ResponsiveNav />
+          </section>
+        </LazyLoad>
+      </Suspense>
       <div className=" container mx-auto px-4">
-        <section id="home" className="h-screen">
-          <Home />
-        </section>
-        <section id="home" className="h-screen">
-          <About />
-        </section>
-        <section id="skills" className="h-[900px]">
-          <Services />
-        </section>
-        <section id="experience" className="sm:h-[800px] md:h-[1500px] lg:h-[1900px]">
-          <Experience />
-        </section>
-        <section>
-          <Tech/>
-        </section>
-         {/*<section id="portfolio" className="h-screen">
-          <Portfolio />
-        </section> */}
 
+        <Suspense fallback={<div>Loading...</div>}>
+          <LazyLoad>
+            <section id="home" className="h-screen">
+              <Home />
+            </section>
+          </LazyLoad>
+        </Suspense>
 
-        {/* <section id="about" className="h-screen snap-center">
-          <About />
-        </section> */}
-        {/* <section id="portfolio"> */}
-        {/* <Portfolio /> */}
-        {/* </section> */}
-        {/* <section id="#testimonials">
-          <Testimonials />
-        </section> */}
-        <section id="contact" className="sm:h-[1100px] md:h-screen">
-          <Contact />
-        </section>
+        <Suspense fallback={<div>loading...</div>}>
+          <LazyLoad height={"100vh"} offset={-100}>
+            <section id="about" className="">
+              <About />
+            </section>
+          </LazyLoad>
+        </Suspense>
+        <Suspense fallback={<div>loading...</div>}>
+          <LazyLoad height={"100vh"} offset={-100}>
+            <section
+              id="experience"
+              className="sm:h-[800px] md:h-[1500px] lg:h-[1900px]"
+            >
+              <Experience />
+            </section>
+          </LazyLoad>
+        </Suspense>
+        <Suspense fallback={<div>loading...</div>}>
+          <LazyLoad height={"100vh"} offset={-100}>
+            <section>
+              <Tech />
+            </section>
+          </LazyLoad>
+        </Suspense>
+        <Suspense fallback={<div>loading...</div>}>
+          <LazyLoad height={"100vh"} offset={-100}>
+            <section id="skills" className="h-[900px]">
+              <Services />
+            </section>
+          </LazyLoad>
+        </Suspense>
+        <Suspense fallback={<div>loading...</div>}>
+          <LazyLoad height={"100vh"} offset={-100}>
+            <section id="contact" className="sm:h-[1100px] md:h-screen">
+              <Contact />
+            </section>
+          </LazyLoad>
+        </Suspense>
       </div>
     </div>
   );
