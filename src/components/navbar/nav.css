@@ -71,7 +71,7 @@ header {
   bottom: 0;
   width: 0;
   height: 2px; /* Adjust underline thickness */
-  background-color: green;
+  background-color: rgb(123, 244, 2);
   transition: width 0.3s ease-in-out; /* Smooth fade-in effect */
 }
 
@@ -93,12 +93,12 @@ header {
   /* background-color: white; */
   color: white;
   border-radius: 5px;
-  border-color: rgb(216, 244, 2);
+  border-color: rgb(123, 244, 2);
   border-radius: 25px;
 }
 
 .ctaLinkStyle:hover{
-  background-color: rgb(62, 185, 5);
+  background-color: rgb(123, 244, 2);
   transition: background-color 0.3s ease, transform 0.2s ease;
   color: black;
 }

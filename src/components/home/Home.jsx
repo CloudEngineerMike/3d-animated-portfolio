@@ -59,15 +59,15 @@ const Home = () => {
               Automation and Full-Stack Application development, delivering
               solutions that drive product success.
             </motion.p>
-            <div className="flex sm:justify-center md:justify-between sm:mt-6  sm:w-[100%] md:w-[80%] lg:w-[65%]">
+            <div className="flex sm:justify-center md:justify-between sm:mt-8  sm:w-[100%] md:w-[80%] lg:w-[64%]">
               <a
                 href="/cv.pdf"
                 download="MikeGSmith_Resume"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="sm:text-xs md:text-base lg:text-base"
+                className="sm:text-xl md:text-base lg:text-xl font-vt323"
               >
-                <div className="border border-white flex items-center sm:p-4 lg:px-4 rounded-lg hover:border-green-400 hover:bg-black transition duration-300">
+                <div className="border border-white flex items-center sm:p-4 lg:px-4 rounded-lg shadow-2xl hover:border-green-400 hover:bg-black transition duration-300 ">
                   Download CV
                   <div className="ml-2">
                     <GrDownload />
@@ -75,12 +75,12 @@ const Home = () => {
                 </div>
               </a>
 
-              <div className=" sm:hidden lg:flex ">
+              <div className=" sm:hidden lg:flex">
                 <a
                   href="https://www.linkedin.com/in/michael-g-smith-9b9677120/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-500"
+                  className="text-blue-500 "
                 >
                   <div className="flex items-center p-5 mr-3 rounded-full border border-white hover:border-green-400 hover:bg-black transition duration-300">
                     <FaLinkedinIn size={iconSize} className="" />
@@ -125,7 +125,7 @@ const Home = () => {
             animate={{ y: [0, 5], opacity: [0, 1, 0] }}
             transition={{
               repeat: Infinity,
-              duration: 3,
+              duration: 8,
               ease: "easeInOut",
             }}
             href="#expertise"

@@ -4,6 +4,7 @@ import Starfield from "react-starfield";
 
 const ResponsiveNav = lazy(() => import("./components/navbar/ResponsiveNav"));
 const Home = lazy(() => import("./components/home/Home"));
+const WorkEthics = lazy(() => import("./components/ethics/WorkEthics"))
 const About = lazy(() => import("./components/about/About"));
 const Experience = lazy(() => import("./components/experience/Experience"));
 const Tech = lazy(() => import("./components/tech/tech"));
@@ -38,6 +39,14 @@ const App = () => {
             </section>
           </LazyLoad>
         </Suspense>
+        <Suspense fallback={<div>Loading...</div>}>
+          <LazyLoad height={"100vh"} offset={-100}>
+            <section>
+              <WorkEthics />
+            </section>
+          </LazyLoad>
+        </Suspense>
+
 
         <Suspense fallback={<div>loading...</div>}>
           <LazyLoad height={"100vh"} offset={-100}>

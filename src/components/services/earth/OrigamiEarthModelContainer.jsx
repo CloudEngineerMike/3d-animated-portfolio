@@ -7,11 +7,11 @@ const OrigamiEarthModelContainer = () => {
   return (
     <Canvas>
         <Suspense fallback="loading...">
-            <Stage environment="apartment" intensity={0}>
+            <Stage environment="apartment" intensity={1.2}>
             <OrigamiEarthModel/>
             </Stage>
-            <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.8}/>
-            <PerspectiveCamera position={[-4,1,3]} zoom={0.8} makeDefault />
+            <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.7}/>
+            <PerspectiveCamera position={[-4,1,3]} zoom={0.78} makeDefault />
         </Suspense>
     </Canvas>
   )
