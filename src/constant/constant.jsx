@@ -12,8 +12,8 @@ import { FaAws } from "react-icons/fa";
 import { VscAzure } from "react-icons/vsc";
 import { FaNodeJs } from "react-icons/fa";
 import { SiAmazondynamodb } from "react-icons/si";
-import { GrMysql } from "react-icons/gr";
-import { IoLogoFirebase } from "react-icons/io5";
+// import { GrMysql } from "react-icons/gr";
+// import { IoLogoFirebase } from "react-icons/io5";
 import { SiAmazons3 } from "react-icons/si";
 import { SiAmazonapigateway } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
@@ -38,23 +38,6 @@ import { SiHostinger } from "react-icons/si";
 import { SiAwslambda } from "react-icons/si";
 import YearUp from "../assets/yu.png";
 import GE from "../assets/ge.png";
-import html from "../assets/html.png";
-import css from "../assets/css.png";
-import nodejs from "../assets/nodejs.png";
-import reactjs from "../assets/reactjs.png";
-import typescript from "../assets/typescript.png";
-import javascript from "../assets/javascript.png";
-import aws from "../assets/aws.png";
-import azure from "../assets/azure.png";
-import next from "../assets/next.png";
-import python from "../assets/python.png";
-import terraform from "../assets/terraform.png";
-import docker from "../assets/docker.png";
-import web from "../assets/web.png";
-import mobile from "../assets/mobile.png";
-import backend from "../assets/backend.png";
-import creator from "../assets/creator.png";
-
 
 export const navLinks = [
   {
@@ -67,23 +50,24 @@ export const navLinks = [
     url: "/#about",
     label: "About",
   },
+  // {
+  //   id: 3,
+  //   url: "/#skills",
+  //   label: "Skills",
+  // },
   {
     id: 3,
     url: "/#experience",
     label: "Experience",
   },
+
   {
     id: 4,
-    url: "/#skills",
-    label: "Skills",
+    url: "/#projects",
+    label: "Projects",
   },
   {
     id: 5,
-    url: "/#portfolio",
-    label: "Portfolio",
-  },
-  {
-    id: 6,
     url: "/#testimonials",
     label: "Testimonials",
   },
@@ -93,7 +77,7 @@ export const ctaButton = [
   {
     id: 1,
     url: "/#contact",
-    label: "Hire Me",
+    label: "Contact Me",
   },
 ];
 
@@ -221,17 +205,17 @@ export const skillCards = [
         color: "text-red-400",
       },
       {
-        name: "CI/CD",
+        name: "CodePipeline",
         icon: <FaAws />,
         color: "text-orange-400",
       },
-      // {
-      //   name: "DevOps",
-      //   icon: <VscAzure />,
-      //   color: "text-blue-400",
-      // },
       {
-        name: "CodePipeline",
+        name: "DevOps Pipeline",
+        icon: <VscAzure />,
+        color: "text-blue-400",
+      },
+      {
+        name: "AWS CloudFront",
         icon: <FaKeycdn />,
         color: "text-orange-600",
       },
@@ -267,16 +251,16 @@ export const skillCards = [
         icon: <SiGnubash />,
         color: "text-white",
       },
-      // {
-      //   name: "YAML",
-      //   icon: <SiYaml />,
-      //   color: "text-red-500",
-      // },
-      // {
-      //   name: "JSON",
-      //   icon: <LuFileJson2 />,
-      //   color: "text-white",
-      // },
+      {
+        name: "YAML",
+        icon: <SiYaml />,
+        color: "text-red-500",
+      },
+      {
+        name: "JSON",
+        icon: <LuFileJson2 />,
+        color: "text-white",
+      },
       {
         name: "Swift",
         icon: <GrSwift />,
@@ -448,7 +432,7 @@ export const experiences = [
       "Developed and optimized cloud-based solutions for data integration, cross-platform analytics, and automation of key processes across AWS and Azure.",
       "Led technical initiatives like automated authentication services and employee onboarding pipelines, enhancing efficiency and security.",
       "Oversaw application migrations, React.Js code audits, and mentoring of junior developers to ensure smooth transitions, quality control, and better team performance.",
-      "Implemented containerization with Docker and CI/CD pipelines to streamline development workflows, improving productivity and system reliability.",
+      // "Implemented containerization with Docker and CI/CD pipelines to streamline development workflows, improving productivity and system reliability.",
     ],
   },
   {
@@ -463,11 +447,11 @@ export const experiences = [
       "Designed and deployed cloud-based solutions using Angular, Terraform, and Azure DevOps to improve data accessibility and operational performance.",
       "Participated in Azure cloud migrations and optimized resource allocation to lower operational costs and enhance infrastructure scalability and security.",
       "Maintained technical documentation and conducted knowledge transfers to streamline onboarding and increase team productivity.",
-      "Automated infrastructure management tasks, reducing manual intervention and speeding up system deployments across cloud platforms.",
+      // "Automated infrastructure management tasks, reducing manual intervention and speeding up system deployments across cloud platforms.",
     ],
   },
   {
-    title: "Network Engineer (Internship)",
+    title: "Network Engineer Intern",
     company_name: "General Electric | Digital",
     icon: GE,
     iconBg: "#1E293B",
@@ -494,89 +478,4 @@ export const experiences = [
   },
 ];
 
-export const technologies = [
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Next JS",
-    icon: next,
-  },
 
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  // {
-  //   name: "Tailwind CSS",
-  //   icon: tailwind,
-  // },
-
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "Python",
-    icon: python,
-  },
-
-  {
-    name: "AWS",
-    icon: aws,
-  },
-  {
-    name: "Azure",
-    icon: azure,
-  },
-  {
-    name: "Docker",
-    icon: docker,
-  },
-
-  // {
-  //   name: "Figma",
-  //   icon: figma,
-  // },
-  {
-    name: "Terraform",
-    icon: terraform,
-  },
-  // {
-  //   name: "Postman",
-  //   icon: postman,
-  // },
-];
-
-export const services = [
-  {
-    title: "Software Engineer",
-    icon: mobile,
-  },
-  {
-    title: "Cloud Automation",
-    icon: creator,
-  },
-  {
-    title: "Backend Engineer",
-    icon: backend,
-  },
-
-  {
-    title: "Frontend Developer",
-    icon: web,
-  },
-];

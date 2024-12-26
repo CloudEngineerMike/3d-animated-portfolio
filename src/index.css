@@ -17,7 +17,7 @@ html {
 
 body {
   scroll-behavior: smooth;
-  background: linear-gradient(to bottom, #01376a, #290289);
+  background: linear-gradient(to bottom, #01376a, #011f40);
   color: white;
   font-family: 'Source Sans Pro', sans-serif;
   min-height: 100vh;
@@ -43,20 +43,3 @@ a {
 .expert-card {
   @apply sm:p-4 md:p-4 lg:p-6 border border-gray-300  max-w-xs w-full;
 }
-
-heroHeadText {
-  @apply font-black text-white lg:text-[80px] sm:text-[60px] text-[40px] lg:leading-[98px] mt-2;
-}
-
-heroSubText {
-  @apply text-[#dfd9ff] font-medium lg:text-[30px] sm:text-[26px] text-[16px] lg:leading-[40px];
-}
-
-sectionHeadText {
-  @apply text-white font-black md:text-[60px] sm:text-[50px] text-[30px];
-}
-
-sectionSubText {
-  @apply sm:text-[18px] text-[14px] uppercase tracking-wider;
-}
-

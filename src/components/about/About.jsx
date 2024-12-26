@@ -4,24 +4,23 @@ import { fadeIn, textVariant } from "../../utils/motion.js";
 import { GrDownload } from "react-icons/gr";
 import Tilt from "react-parallax-tilt";
 import { GiRibbonMedal } from "react-icons/gi";
-// import { services } from "../../constant/constant";
-// import ServiceCard from "./ServiceCard";
+import ComputerModelContainer from "../services/computer/ComputerModelContainer.jsx";
 
 const About = () => {
   return (
-    <div className="container h-screen mx-auto flex flex-col justify-center items-center lg:max-w-[100%]  sm:py-32">
+    <div className="container sm:h-[1200px] md:h-screen mx-auto flex flex-col justify-center items-center lg:max-w-[100%]  sm:py-32 ">
       {/* Section Heading */}
-      <motion.div variants={textVariant()} className="text-center font-vt323">
-        <h2 className={styles.sectionHeadText}>More Than Just A Coder</h2>
+      <motion.div variants={textVariant()} className="text-center">
+        <h2 className={styles.sectionHeadText}>More Than  A Coder</h2>
       </motion.div>
-      <div className="h-full w-full mx-auto grid flex-row justify-center items-center grid-cols-4 p-4 gap-6">
+      <div className="h-full w-full mx-auto grid flex-row justify-center items-center grid-cols-4 lg:p-4 lg:gap-4 ">
         {/* Left Container */}
-        <div className="sm:hidden lg:grid grid-cols-4 w-full h-full flex-col justify-center items-center sm:col-span-4 lg:col-span-2 p-6 ">
+        <div className="sm:hidden lg:grid grid-cols-4 w-full h-full flex-col justify-center items-center sm:col-span-4 lg:col-span-2 pt-16">
           {/* First Quadrant */}
           <div className="flex justify-center items-center w-full h-full col-span-2 relative">
             <Tilt
               tiltReverse={true}
-              className=" p-4 absolute rounded-lg border-solid border-4 border-white bg-blue-600 bottom-[100px] left-[185px] shadow-2xl"
+              className=" p-4 absolute rounded-lg border-solid border-4 border-white bg-blue-600 bottom-[90px] left-[210px] shadow-2xl"
             >
               <GiRibbonMedal className=" text-[80px] " />
             </Tilt>
@@ -36,6 +35,8 @@ const About = () => {
               className="absolute  sm:left-[3px] md:left-[164px] lg:left-[8px] sm:bottom-[0px] md:h-[500px] lg:h-[450px]"
               src="/sittingPic.svg"
               alt=""
+              loading="lazy"
+
             />
           </Tilt>
 
@@ -48,40 +49,44 @@ const About = () => {
               className="absolute h-full  rounded-xl"
               src="/coding.jpg"
               alt=""
+              loading="lazy"
+
             />
           </div>
 
           {/* Fourth Quadrant */}
           <div className="flex justify-center items-start col-span-2 w-full h-full ml-4 pt-14">
-            <div className="flex border-l-[6px] border-green-500 ml-8">
-              <p className="text-5xl ml-4">7+</p>
-              <p className="ml-4 text-[18px]">
-                Successful <br /> Years
+            <div className="flex border-l-[4px] border-green-500">
+              <p className="ml-4 text-[20px] italic">
+              &#34;Do or do not. <br /> There is no try.&#34; <br /> - Master Yoda
               </p>
             </div>
           </div>
-        </div>
+        </div> 
+
         {/* Right Container */}
-        <div className="flex sm:col-span-4 lg:col-span-2 flex-col justify-center items-start h-full md:p-10">
-          <h2 className="sm:hidden md:flex md:text-[20px] font-semibold">Get to Know Me</h2>
+        <div className="flex sm:col-span-4 lg:col-span-2 flex-col justify-center sm:items-center md:items-start h-full md:px-10 lg:p-10 ">
+          {/* <h2 className="sm:hidden lg:flex md:text-[20px] font-semibold">
+            Get to Know Me
+          </h2> */}
           <motion.div
             variants={fadeIn("", "", 0.1, 1)}
-            className="py-6 sm:text-sm md:text-base "
+            className="md:py-6 sm:text-center md:text-start sm:text-base md:text-base sm:mb-10"
           >
-            My journey started in high school with a web design class that
-            ignited my passion. In 2016, I enrolled in the{" "}
-            <span className="font-semibold italic">Year Up United </span>
-            program, completing six months of IT training and earning an
-            internship at <span className="font-bold">General Electric</span>.
-            This pivotal experience launched my career.
-            <br />
+            <div className="sm:hidden lg:flex flex-col">
+              My journey started in high school with a web design class that
+              ignited my passion. In 2016, I enrolled in the Year Up United
+              program, completing six months of IT training and earning an
+              internship at General Electric. This pivotal experience launched my career.
+            </div>
             <br />
             Close to a decade in my career, I&#39;ve led projects from inception
             to completion. Starting as a Junior Software Engineer, I became
-            proficient in both <span className="font-bold"> AWS</span> and
-            <span className="font-bold"> Azure</span> platforms. Promoted to
-            Senior in 2022, I now provide technical leadership, mentorship, and
-            foster team success.
+            proficient in both{" "}
+            <span className="font-bold text-orange-500"> AWS</span> and
+            <span className="font-bold text-blue-400"> Azure</span> platforms.
+            Promoted to Senior in 2022, providing technical leadership,
+            mentorship, and fostering team success.
             <br />
             <br />
             Over the last few years, I&#39;ve learned to build high-performance,
@@ -92,33 +97,38 @@ const About = () => {
 
           <Tilt
             tiltReverse={true}
-            className="grid grid-cols-2 bg-indigo-900 border-2 border-green-500 rounded-[20px] shadow-2xl p-6 mb-8"
+            className="flex sm:flex-col  md:flex-row  grid-cols-2 bg-indigo-900 border-2 border-green-500 rounded-[20px] shadow-2xl mb-10 sm:p-8 md:p-0"
           >
-            <div className="col-span-1 border-r-2 border-r-gray-500">
-              <h4 className="font-bold">Name</h4>
-              <p className="text-green-300">Michael G. Smith</p>
+            <div className="col-span-1 md:border-r-2 border-r-gray-500 md:p-6">
+              <div className=" ">
+                <h4 className="font-bold">Name</h4>
+                <p className="text-green-300">Michael G. Smith</p>
+              </div>
+              <div className="sm:py-4 md:py-2 ">
+                <h4 className="font-bold">Location</h4>
+                <p className="text-green-300">Atlanta, GA</p>
+              </div>
+              <div className=" ">
+                <h4 className="font-bold">Years of Experience</h4>
+                <p className="text-green-300">7+</p>
+              </div>
             </div>
-            <div className="col-span-1 pl-6">
-              <h4 className="font-bold">Sports I Love to Play</h4>
-              <p className="text-green-300">
-                Basketball, Football, Table Tennis
-              </p>
-            </div>
-            <div className="col-span-1 py-2 border-r-2 border-r-gray-500">
-              <h4 className="font-bold">Location</h4>
-              <p className="text-green-300">Atlanta, GA</p>
-            </div>
-            <div className="col-span-1 py-2 pl-6">
-              <h4 className="font-bold">Hobbies</h4>
-              <p className="text-green-300">Music, Cooking, Video games</p>
-            </div>
-            <div className="col-span-1 border-r-2 border-r-gray-500">
-              <h4 className="font-bold">Years of Experience</h4>
-              <p className="text-green-300">7+</p>
-            </div>
-            <div className="col-span-1 pl-6">
-              <h4 className="font-bold">Movies</h4>
-              <p className="text-green-300">Star Wars & Marvel</p>
+
+            <div className="col-span-1 md:p-6">
+              <div className="sm:pt-4 md:pt-0 md:pl-6">
+                <h4 className="font-bold">Sports</h4>
+                <p className="text-green-300">
+                  Basketball, Football, Table Tennis
+                </p>
+              </div>
+              <div className="sm:py-4 md:py-2  md:pl-6">
+                <h4 className="font-bold">Hobbies</h4>
+                <p className="text-green-300">Music, Cooking, Video games</p>
+              </div>
+              <div className="md:pl-6">
+                <h4 className="font-bold">Movies</h4>
+                <p className="text-green-300">Star Wars & Marvel</p>
+              </div>
             </div>
           </Tilt>
           <a
@@ -136,14 +146,12 @@ const About = () => {
             </div>
           </a>
         </div>
-      </div>
+        {/* <div className="sm:hidden lg:flex col-span-2 w-full h-full cursor-grab ">
 
-      {/* Service Cards */}
-      {/* <div className="mt-20 flex flex-wrap gap-10">
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
-        ))}
-      </div> */}
+<ComputerModelContainer />
+</div> */}
+
+      </div>
     </div>
   );
 };

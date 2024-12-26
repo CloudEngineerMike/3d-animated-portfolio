@@ -7,7 +7,8 @@ const ExperienceCard = ({ experience }) => {
       contentStyle={{
         background: experience.iconBg,
         boxShadow: 'none',
-        border: "1px solid #B45309"
+        border: "3px solid #34D399",
+        borderRadius: "10px"
         // color: "#B45309",
         // borderRadius: "1.5rem",
       }}
@@ -41,7 +42,7 @@ const ExperienceCard = ({ experience }) => {
         </p>
       </div>
 
-      <ul className="sm:hidden md:flex flex-col mt-5 list-disc ml-5 space-y-2">
+      <ul className="xs:hidden md:flex flex-col mt-5 list-disc ml-5 space-y-2">
         {experience.points.map((point, index) => (
           <li
             key={`experience-point-${index}`}

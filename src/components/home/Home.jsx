@@ -36,7 +36,7 @@ const Home = () => {
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
-            className="sm:text-[32px] lg:text-[60px] sm:text-center md:text-start  bg-gradient-to-r from-[#45da4d] to-[#f6ff00] text-transparent bg-clip-text font-vt323"
+            className="xs:text-[30px] lg:text-[60px] xs:text-center md:text-start  bg-gradient-to-r from-[#45da4d] to-[#f6ff00] text-transparent bg-clip-text font-vt323"
           >
             <Speech />
           </motion.h2>
@@ -47,27 +47,27 @@ const Home = () => {
           >
             <motion.h1
               variants={awardVariants}
-              className="sm:text-[40px] lg:text-[80px] sm:text-center md:text-start font-bold font-vt323 "
+              className="xs:text-[40px] lg:text-[80px] xs:text-center md:text-start font-bold font-vt323 sm:leading-[90px]"
             >
               Hello, I&#39;m Mike.
             </motion.h1>
             <motion.p
-              className="sm:text-[20px] text-center md:text-start md:text-[16px] lg:text-[19px] lg:mr-10 font-vt323 lg:tracking-wider"
+              className="xs:text-[15px] sm:text-[20px] text-center md:text-start md:text-[16px] lg:text-[19px] lg:mr-10 font-vt323 lg:tracking-wider"
               variants={awardVariants}
             >
               A results-driven Senior Software Engineer specializing in Cloud
               Automation and Full-Stack Application development, delivering
               solutions that drive product success.
             </motion.p>
-            <div className="flex sm:justify-center md:justify-between sm:mt-8  sm:w-[100%] md:w-[80%] lg:w-[64%]">
+            <div className="flex xs:justify-center md:justify-between xs:mt-8  xs:w-[100%] md:w-[80%] lg:w-[64%]">
               <a
                 href="/cv.pdf"
                 download="MikeGSmith_Resume"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="sm:text-xl md:text-base lg:text-xl font-vt323"
+                className="xs:text-sm md:text-base lg:text-xl font-vt323"
               >
-                <div className="border border-white flex items-center sm:p-4 lg:px-4 rounded-lg shadow-2xl hover:border-green-400 hover:bg-black transition duration-300 ">
+                <div className="border border-white flex items-center xs:p-4 lg:px-4 rounded-lg shadow-2xl hover:border-green-400 hover:bg-black transition duration-300 ">
                   Download CV
                   <div className="ml-2">
                     <GrDownload />
@@ -75,7 +75,7 @@ const Home = () => {
                 </div>
               </a>
 
-              <div className=" sm:hidden lg:flex">
+              <div className=" xs:hidden lg:flex">
                 <a
                   href="https://www.linkedin.com/in/michael-g-smith-9b9677120/"
                   target="_blank"
@@ -91,7 +91,7 @@ const Home = () => {
                   href="https://github.com/CloudEngineerMike"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="sm:text-xs md:text-base"
+                  className="xs:text-xs md:text-base"
                 >
                   <div className="flex items-center p-5 mr-3 rounded-full border border-white hover:border-green-400 hover:bg-black transition duration-300">
                     <FaGithub size={iconSize} />
@@ -99,10 +99,10 @@ const Home = () => {
                 </a>
 
                 <a
-                  href="/"
+                  href="https://www.youtube.com/@EngineerGuyMike"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-red-600 sm:text-xs md:text-base lg:text-base "
+                  className="text-red-600 xs:text-xs md:text-base lg:text-base "
                 >
                   <div className="flex items-center p-5 rounded-full border border-white hover:border-green-400 hover:bg-black transition duration-300">
                     <FaYoutube size={iconSize} />
@@ -115,12 +115,12 @@ const Home = () => {
       </div>
 
       {/*  */}
-      <div className="sm:hidden md:flex md:col-span-6 lg:col-span-7 w-full md:h-full flex justify-center items-center cursor-grab">
+      <div className="xs:hidden md:flex md:col-span-6 lg:col-span-7 w-full md:h-full flex justify-center items-center cursor-grab">
         <OrigamiEarthModelContainer />
       </div>
 
-      <div className="absolute inset-0 sm:top-[800px] md:top-[900px] sm:left-[165px] md:left-[343px] lg:left-[725px]">
-        <a href="#about">
+      <div className="absolute inset-0 xs:top-[600px] xs:left-[133px] sm:top-[800px] sm:left-[165px] md:top-[900px]  md:left-[343px] lg:left-[725px]">
+        {/* <a href="#about"> */}
           <motion.div
             animate={{ y: [0, 5], opacity: [0, 1, 0] }}
             transition={{
@@ -157,7 +157,7 @@ const Home = () => {
               />
             </svg>
           </motion.div>
-        </a>
+        {/* </a> */}
       </div>
     </div>
   );

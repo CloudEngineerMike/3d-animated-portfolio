@@ -2,20 +2,10 @@ import "./contact.css";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
-import { MdOutlineMarkEmailUnread } from "react-icons/md";
-import { IoIosPhonePortrait } from "react-icons/io";
-import { IoLocationOutline } from "react-icons/io5";
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { GrYoutube } from "react-icons/gr";
-import { IoIosPersonAdd } from "react-icons/io";
-import { FaPhone } from "react-icons/fa6";
-import { TfiEmail } from "react-icons/tfi";
-import { MdOutlineMessage } from "react-icons/md";
+import { styles } from "../../styles";
 // import { span } from "motion/react-client";
 
 const Contact = () => {
-  // const [selectedOption, setSelectedOption] = useState("");
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
 
@@ -52,128 +42,57 @@ const Contact = () => {
   };
 
   return (
-    <div id="testimonials" className=" sm:pt-12 lg:py-32">
+    <div id="testimonials" className=" sm:pt-20 lg:py-24">
       <div className="container w-full m-auto">
-        <div className="flex flex-col justify-center">
-          <h2 className="section-title px-2 text-black">
-            Let&#39;s work together.
-          </h2>
+        <div className="flex flex-col justify-center text-center">
+          <h2 className={styles.sectionHeadText}>Contact</h2>
+          <p className="xs:text-sm pb-6">Contact me by submitting the form below! <br /> I will get back to you as soon asap.</p>
+
         </div>
 
-        <div className="grid justify-center items-center lg:grid-cols-3 gap-8 p-10 mt-12 bg-white rounded-lg">
-          <div className="bg-[#011c2b] lg:col-span-1 rounded-lg p-6 h-full max-lg:order-1">
-            <h2 className="text-xl text-white">Contact Information</h2>
-            <p className="text-base text-gray-300 mt-4">
-              Available for freelance or full-time positions.
-            </p>
+        {/* <div className="grid justify-center items-center md:grid-cols-4 sm:gap-16 md:gap-8 lg:gap-8 sm:mt-12 lg:mt-20 lg:bg-white lg:p-8 lg:shadow-2xl lg:rounded-2xl"> */}
+        <div className="flex justify-center items-center">
+          
+          <div className="p-7 xs:w-full md:col-span-2 lg:col-span-3 bg-white rounded-lg  shadow-2xl lg:shadow-none md:w-full">
 
-            <ul className="mt-16 space-y-4 text-sm">
-              <li className="flex items-center">
-                <MdOutlineMarkEmailUnread className="text-lg" />
-                <div className="text-white ml-4">
-                  michaelgsmith1914@gmail.com
-                </div>
-              </li>
-              <li className="flex items-center">
-                <IoIosPhonePortrait className="text-lg" />
-                <div className="text-white ml-4">Ask via e-mail</div>
-              </li>
-              <li className="flex items-center">
-                <IoLocationOutline className="text-lg" />
-                <div className="text-white ml-4">Atlanta, GA, USA</div>
-              </li>
-            </ul>
-
-            <ul className="flex flex-wrap gap-4 mt-10">
-              <li className="bg-gray-800 hover:bg-gray-900 h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-                <a
-                  href="https://www.linkedin.com/in/michael-g-smith-9b9677120/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaLinkedin className="text-lg" />
-                </a>
-              </li>
-              <li className="bg-gray-800 hover:bg-gray-900 h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-                <a
-                  href="https://github.com/CloudEngineerMike"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaGithub className="text-lg" />
-                </a>
-              </li>
-              <li className="bg-gray-800 hover:bg-gray-900 h-10 w-10 rounded-full flex items-center justify-center shrink-0 ">
-                <a
-                  href="https://www.youtube.com/channel/UCWqT2XT9Pjc-MKPHtDoLesQ"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <GrYoutube className="text-lg " />
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className="p-10 lg:col-span-2 bg-white rounded-lg">
             <form ref={form} onSubmit={sendEmail}>
               <div className="grid sm:grid-cols-2 gap-8">
-                <div className="relative flex items-center">
+                <div className="relative flex flex-col  text-gray-500 xs:text-xs sm:text-sm lg:text-base">
+                  <h2 className="pb-2 font-semibold">Name</h2>
                   <input
                     type="text"
                     required
                     name="user_firstname"
-                    placeholder="First Name"
-                    className="px-2 py-3 bg-white w-full text-sm text-gray-800 border-b border-gray-300 focus:border-blue-500 outline-none"
+                    placeholder="Enter Your Name"
+                    className="p-4 bg-slate-200 rounded-md w-full  text-gray-800 outline-indigo-400"
                   />
-                  <IoIosPersonAdd className="text-2xl text-gray-300" />
                 </div>
 
-                <div className="relative flex items-center">
-                  <input
-                    type="text"
-                    required
-                    name="user_lastname"
-                    placeholder="Last Name"
-                    className="px-2 py-3 bg-white w-full text-sm text-gray-800 border-b border-gray-300 focus:border-blue-500 outline-none"
-                  />
-                  <IoIosPersonAdd className="text-2xl text-gray-300" />
-                </div>
-
-                <div className="relative flex items-center">
-                  <input
-                    type="number"
-                    placeholder="Phone No. (optional)"
-                    name="user_phone"
-                    className="px-2 py-3 bg-white w-full text-sm text-gray-800 border-b border-gray-300 focus:border-blue-500 outline-none"
-                  />
-                  <FaPhone className="text-lg text-gray-300" />
-                </div>
-
-                <div className="relative flex items-center">
+                <div className="relative flex flex-col  text-gray-500 xs:text-xs sm:text-sm lg:text-base">
+                  <h2 className="pb-2 font-semibold">Email</h2>
                   <input
                     type="email"
                     required
                     name="user_email"
-                    placeholder="Email"
-                    className="px-2 py-3 bg-white w-full text-sm text-gray-800 border-b border-gray-300 focus:border-blue-500 outline-none"
+                    placeholder="Enter Your Email"
+                    className="p-4 bg-slate-200 rounded-md w-full  text-gray-800 outline-indigo-400"
                   />
-                  <TfiEmail className="text-lg text-gray-300" />
                 </div>
 
-                <div className="relative flex items-center sm:col-span-2">
+                <div className="relative flex flex-col  text-gray-500 xs:text-xs sm:text-sm lg:text-base">
+                  <h2 className="pb-2 font-semibold">Message</h2>
                   <textarea
                     rows={6}
                     required
                     name="user_message"
-                    placeholder="Write your message..."
-                    className="px-2 pt-3 bg-white w-full text-sm text-gray-800 border-b border-gray-300 focus:border-blue-500 outline-none"
+                    placeholder="Enter Your Message"
+                    className="p-4 bg-slate-200 rounded-md w-full  text-gray-800 outline-indigo-400"
                   ></textarea>
-                  <MdOutlineMessage className="text-xl text-gray-300" />
                 </div>
               </div>
               <button
                 type="submit"
-                className="mt-4 mb-4 w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition"
+                className="mt-8 w-full bg-indigo-600 text-white font-semibold tracking-wider xs:text-xs uppercase lg:text-base p-4 rounded hover:bg-blue-600 transition"
               >
                 Submit
               </button>
@@ -187,9 +106,6 @@ const Contact = () => {
               )}
             </form>
           </div>
-          {/* <div className="grid justify-center items-center col-span-3">
-            <ComputerModelContainer />
-          </div> */}
         </div>
       </div>
     </div>
