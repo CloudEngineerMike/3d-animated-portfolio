@@ -1,9 +1,6 @@
-import { styles } from "../../styles";
-
 const ProjectCard = () => {
   return (
     <div
-      id="projects"
       className="  xs:mt-16 inset-0 z-1 h-full w-full bg-white bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px] text-black "
     >
       <div className="flex flex-col justify-center text-center text-black">
@@ -48,7 +45,7 @@ const ProjectCard = () => {
               </ul>
             </div>
             <a href="/" className="">
-              <button className="mt-8 w-full bg-indigo-600 text-white  font-semibold tracking-wider xs:text-xs uppercase lg:text-base xs:px-10 p-4 rounded hover:bg-indigo-800 transition shadow-2xl">
+              <button className="mt-8 w-full bg-indigo-600 text-white  font-semibold tracking-wider xs:text-xs uppercase lg:text-base xs:px-10 p-4 rounded hover:scale-105 transition duration-300 shadow-lg hover:shadow-2xl">
                 Case Study
               </button>
             </a>
@@ -83,8 +80,8 @@ const ProjectCard = () => {
               </ul>
             </div>
             <a href="/">
-              <button className="mt-8 w-full bg-indigo-600 text-white  font-semibold tracking-wider xs:text-xs uppercase lg:text-base xs:px-10 p-4 rounded hover:bg-indigo-800 transition shadow-2xl">
-                Case Study
+            <button className="mt-8 w-full bg-indigo-600 text-white  font-semibold tracking-wider xs:text-xs uppercase lg:text-base xs:px-10 p-4 rounded hover:scale-105 transition duration-300 shadow-lg hover:shadow-2xl">
+            Case Study
               </button>
             </a>
           </div>
@@ -124,8 +121,8 @@ const ProjectCard = () => {
               </ul>
             </div>
             <a href="/">
-              <button className="mt-8 w-full bg-indigo-600 text-white  font-semibold tracking-wider xs:text-xs uppercase lg:text-base xs:px-10 p-4 rounded hover:bg-indigo-800 transition shadow-2xl">
-                Case Study
+            <button className="mt-8 w-full bg-indigo-600 text-white  font-semibold tracking-wider xs:text-xs uppercase lg:text-base xs:px-10 p-4 rounded hover:scale-105 transition duration-300 shadow-lg hover:shadow-2xl">
+            Case Study
               </button>
             </a>
           </div>
@@ -159,8 +156,8 @@ const ProjectCard = () => {
               </ul>
             </div>
             <a href="/">
-              <button className="mt-8 w-full bg-indigo-600 text-white  font-semibold tracking-wider xs:text-xs uppercase lg:text-base xs:px-10 p-4 rounded hover:bg-indigo-800 transition shadow-2xl">
-                Case Study
+            <button className="mt-8 w-full bg-indigo-600 text-white  font-semibold tracking-wider xs:text-xs uppercase lg:text-base xs:px-10 p-4 rounded hover:scale-105 transition duration-300 shadow-lg hover:shadow-2xl">
+            Case Study
               </button>
             </a>
           </div>

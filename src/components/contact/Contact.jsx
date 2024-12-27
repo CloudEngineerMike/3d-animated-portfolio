@@ -42,7 +42,7 @@ const Contact = () => {
   };
 
   return (
-    <div id="testimonials" className=" sm:pt-20 lg:py-24">
+    <div className=" sm:pt-20 lg:py-24">
       <div className="container w-full m-auto">
         <div className="flex flex-col justify-center text-center">
           <h2 className={styles.sectionHeadText}>Contact</h2>

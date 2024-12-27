@@ -32,8 +32,8 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed xs:h-20 md:h-24 w-full z-10 transition-all duration-200 ease-in-out ${
-        navBg ? "bg-[#390365]" : ""
+      className={`fixed xs:h-[70px] md:h-[90px] w-full z-20 transition-all duration-200 ease-in-out ${
+        navBg ? "bg-indigo-700 shadow-2xl" : ""
       }`}
     >
       <div className=" w-full flex justify-between sticky top-0 z-10 h-full px-4">
@@ -89,7 +89,7 @@ const Header = () => {
 
         <div>
           <div
-            className="flex justify-center items-center  mr-4 hover:cursor-pointer w-full h-full  lg:hidden"
+            className="flex w-full h-full justify-center items-center hover:cursor-pointer   lg:hidden"
             onClick={handleClick}
           >
             {!nav ? (
@@ -99,7 +99,7 @@ const Header = () => {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="xs:w-8 md:w-9 mr-2 "
+                className="xs:w-8 md:w-9"
               >
                 <path
                   strokeLinecap="round"
@@ -131,7 +131,7 @@ const Header = () => {
           className={
             !nav
               ? "hidden"
-              : "absolute divide-y divide-dotted divide-black bg-white w-full px-4 py-4 top-20 left-0 h-screen text-white text-2xl"
+              : "absolute divide-y divide-dotted divide-black bg-white w-full px-4 py-4 top-[70px] left-0 h-screen text-white text-2xl"
           }
         >
           <li className="pb-2 w-full">

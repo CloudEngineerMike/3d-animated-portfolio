@@ -12,8 +12,8 @@ import { FaAws } from "react-icons/fa";
 import { VscAzure } from "react-icons/vsc";
 import { FaNodeJs } from "react-icons/fa";
 import { SiAmazondynamodb } from "react-icons/si";
-// import { GrMysql } from "react-icons/gr";
-// import { IoLogoFirebase } from "react-icons/io5";
+import { GrMysql } from "react-icons/gr";
+import { IoLogoFirebase } from "react-icons/io5";
 import { SiAmazons3 } from "react-icons/si";
 import { SiAmazonapigateway } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
@@ -68,7 +68,7 @@ export const navLinks = [
   },
   {
     id: 5,
-    url: "/#testimonials",
+    url: "/#contact",
     label: "Testimonials",
   },
 ];
@@ -81,15 +81,14 @@ export const ctaButton = [
   },
 ];
 
-export const skillCards = [
+export const skills = [
   {
     id: 1,
-    title: "Front-End",
     cardItems: [
       {
         name: "React Js",
         icon: <FaReact />,
-        color: "text-blue-400",
+        color: "text-blue-500",
       },
       {
         name: "Next Js",
@@ -104,7 +103,7 @@ export const skillCards = [
       {
         name: "Vite",
         icon: <SiVite />,
-        color: "text-yellow-600",
+        color: "text-purple-400",
       },
       {
         name: "HTML",
@@ -126,16 +125,10 @@ export const skillCards = [
         icon: <FaSwift />,
         color: "text-blue-600",
       },
-    ],
-  },
-  {
-    id: 2,
-    title: "Back-End",
-    cardItems: [
       {
         name: "AWS",
         icon: <FaAws />,
-        color: "text-orange-400",
+        color: "text-orange-500",
       },
       {
         name: "Azure",
@@ -145,24 +138,24 @@ export const skillCards = [
       {
         name: "Node.js",
         icon: <FaNodeJs />,
-        color: "text-green-400",
+        color: "text-green-500",
       },
 
       {
         name: "DynamoDB",
         icon: <SiAmazondynamodb />,
-        color: "text-blue-400",
+        color: "text-blue-600",
       },
-      // {
-      //   name: "MySQL",
-      //   icon: <GrMysql />,
-      //   color: "text-blue-700",
-      // },
-      // {
-      //   name: "Firebase",
-      //   icon: <IoLogoFirebase />,
-      //   color: "text-orange-400",
-      // },
+      {
+        name: "MySQL",
+        icon: <GrMysql />,
+        color: "text-blue-700",
+      },
+      {
+        name: "Firebase",
+        icon: <IoLogoFirebase />,
+        color: "text-orange-400",
+      },
       {
         name: "S3",
         icon: <SiAmazons3 />,
@@ -171,21 +164,15 @@ export const skillCards = [
       {
         name: "API Gateway",
         icon: <SiAmazonapigateway />,
-        color: "text-orange-400",
+        color: "text-orange-600",
       },
       {
         name: "Linux",
         icon: <FaLinux />,
         color: "text-white",
       },
-    ],
-  },
-  {
-    id: 3,
-    title: "DevOps",
-    cardItems: [
       {
-        name: "GitHub & Actions",
+        name: "GitHub",
         icon: <FaGithub />,
         color: "text-white",
       },
@@ -207,7 +194,7 @@ export const skillCards = [
       {
         name: "CodePipeline",
         icon: <FaAws />,
-        color: "text-orange-400",
+        color: "text-orange-500",
       },
       {
         name: "DevOps Pipeline",
@@ -215,20 +202,14 @@ export const skillCards = [
         color: "text-blue-400",
       },
       {
-        name: "AWS CloudFront",
+        name: "CDN",
         icon: <FaKeycdn />,
-        color: "text-orange-600",
+        color: "text-green-600",
       },
-    ],
-  },
-  {
-    id: 4,
-    title: "Languages",
-    cardItems: [
       {
         name: "Python",
         icon: <FaPython />,
-        color: "text-yellow-300",
+        color: "text-yellow-500",
       },
       {
         name: "TypeScript",
@@ -244,7 +225,7 @@ export const skillCards = [
       {
         name: "PowerShell",
         icon: <VscTerminalPowershell />,
-        color: "text-blue-500",
+        color: "text-blue-600",
       },
       {
         name: "Bash",
@@ -266,12 +247,6 @@ export const skillCards = [
         icon: <GrSwift />,
         color: "text-orange-600",
       },
-    ],
-  },
-  {
-    id: 5,
-    title: "Others",
-    cardItems: [
       {
         name: "Figma",
         icon: <FaFigma />,
@@ -295,7 +270,7 @@ export const skillCards = [
       {
         name: "Xcode",
         icon: <SiXcode />,
-        color: "text-blue-400",
+        color: "text-blue-500",
       },
       {
         name: "Postman",
@@ -477,5 +452,3 @@ export const experiences = [
     ],
   },
 ];
-
-

@@ -1,158 +1,119 @@
 import { motion } from "framer-motion";
-import { styles } from "../../styles";
+import { skills } from "../../constant/constant";
 import { fadeIn, textVariant } from "../../utils/motion.js";
-import { GrDownload } from "react-icons/gr";
-import Tilt from "react-parallax-tilt";
-import { GiRibbonMedal } from "react-icons/gi";
-import ComputerModelContainer from "../services/computer/ComputerModelContainer.jsx";
+import { div } from "motion/react-client";
 
 const About = () => {
   return (
-    <div className="container sm:h-[1200px] md:h-screen mx-auto flex flex-col justify-center items-center lg:max-w-[100%]  sm:py-32 ">
-      {/* Section Heading */}
-      <motion.div variants={textVariant()} className="text-center">
-        <h2 className={styles.sectionHeadText}>More Than  A Coder</h2>
-      </motion.div>
-      <div className="h-full w-full mx-auto grid flex-row justify-center items-center grid-cols-4 lg:p-4 lg:gap-4 ">
-        {/* Left Container */}
-        <div className="sm:hidden lg:grid grid-cols-4 w-full h-full flex-col justify-center items-center sm:col-span-4 lg:col-span-2 pt-16">
-          {/* First Quadrant */}
-          <div className="flex justify-center items-center w-full h-full col-span-2 relative">
-            <Tilt
-              tiltReverse={true}
-              className=" p-4 absolute rounded-lg border-solid border-4 border-white bg-blue-600 bottom-[90px] left-[210px] shadow-2xl"
-            >
-              <GiRibbonMedal className=" text-[80px] " />
-            </Tilt>
-          </div>
+    // <div className="lg:pt-16  bg-white w-full h-full">
 
-          {/* Second Quadrant */}
-          <Tilt
-            tiltReverse={true}
-            className=" flex justify-center items-center w-full col-span-2 sm:h-[340px] md:h-[350px] md:w-[350px] bg-[url('/wallpaper.jpg')] bg-no-repeat bg-cover overflow-x-clip rounded-xl border-solid border-4 border-white relative shadow-2xl"
-          >
-            <img
-              className="absolute  sm:left-[3px] md:left-[164px] lg:left-[8px] sm:bottom-[0px] md:h-[500px] lg:h-[450px]"
-              src="/sittingPic.svg"
-              alt=""
-              loading="lazy"
+      <div className="relative z-1 h-full w-full bg-slate-950 lg:pt-16 ">
+                {/* Section Heading */}
+                <motion.div
+          variants={textVariant()}
+          className="flex flex-col justify-center text-center mb-10"
+        >
+          <h2 className="section-title">About Me</h2>
+          {/* <p className="section-description">
+            Information about me, what I do, and my current skills
+          </p> */}
+        </motion.div>
 
-            />
-          </Tilt>
-
-          {/* Third Quadrant */}
-          <div
-            tiltReverse={true}
-            className="relative flex justify-center items-center col-span-2 w-full h-[250px] bottom-[90px] left-[65px] rounded-xl border-solid border-4 border-white shadow-2xl"
-          >
-            <img
-              className="absolute h-full  rounded-xl"
-              src="/coding.jpg"
-              alt=""
-              loading="lazy"
-
-            />
-          </div>
-
-          {/* Fourth Quadrant */}
-          <div className="flex justify-center items-start col-span-2 w-full h-full ml-4 pt-14">
-            <div className="flex border-l-[4px] border-green-500">
-              <p className="ml-4 text-[20px] italic">
-              &#34;Do or do not. <br /> There is no try.&#34; <br /> - Master Yoda
+        <div className="max-w-[1500px] mx-auto  w-full flex xs:flex-col md:flex-row  xs:space-y-4 md:space-y-0">
+          {/* Left Container */}
+          <div className="z-2 xs:w-full md:w-1/2 flex flex-col xs:p-6 md:p-2 md:ml-4 lg:ml-0 lg:p-16 ">
+            <h1 className="xs:text-[20px] lg:text-[24px] font-bold mb-8">
+              Get to know me!
+            </h1>
+            <div className="xs:text-[15px] md:text-[13px] lg:text-[16px] space-y-4 leading-relaxed text-slate-300">
+              <p>
+                In 2016, I enrolled in the{" "}
+                <a
+                  href="https://www.yearup.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className=" italic text-yellow-300"
+                >
+                  Year Up United{" "}
+                </a>
+                program, completing six months of IT training and earning an
+                internship at General Electric. This pivotal experience launched
+                my career.
+              </p>
+              <p>
+                Now, close to a decade into my career, I&#39;ve led projects
+                from whiteboard and dry erase markers to completion. Starting as
+                a Junior Software Engineer, I became proficient in both{" "}
+                <span className="font-bold text-orange-600"> AWS</span> and
+                <span className="font-bold text-blue-600"> Azure</span>{" "}
+                platforms. Eventually, promoted to{" "}
+                <span className="font-semibold ">
+                  Sr. Software Engineer
+                </span>{" "}
+                in 2022, providing technical leadership, mentorship, and
+                fostering team success.
+              </p>
+              <p>
+                Over the past few years, I&#39;ve learned to build responsive
+                full-stack web applications, commited to crafting scalable
+                solutions that create meaningful impact.
               </p>
             </div>
+            <div className="mt-8 flex xs:space-x-4 lg:space-x-6">
+              <a
+                href="/#contact"
+                className="bg-indigo-600 rounded-md hover:scale-105 transition duration-300 shadow-xl hover:shadow-2xl"
+              >
+                <button className=" w-full  text-white  font-semibold tracking-wider xs:text-[10px] lg:text-xs uppercase lg:text-[15] xs:px-10 p-4">
+                  Contact
+                </button>
+              </a>
+              <a
+                href="/cv.pdf"
+                download="MikeGSmith_Resume"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-indigo-600 rounded-md hover:scale-105 transition duration-300 shadow-xl hover:shadow-2xl"
+              >
+                <button className=" w-full  text-white  font-semibold tracking-wider xs:text-[10px] lg:text-xs uppercase lg:text-[15] xs:px-10 p-4 ">
+                  Download CV
+                </button>
+              </a>
+            </div>
           </div>
-        </div> 
-
-        {/* Right Container */}
-        <div className="flex sm:col-span-4 lg:col-span-2 flex-col justify-center sm:items-center md:items-start h-full md:px-10 lg:p-10 ">
-          {/* <h2 className="sm:hidden lg:flex md:text-[20px] font-semibold">
-            Get to Know Me
-          </h2> */}
-          <motion.div
-            variants={fadeIn("", "", 0.1, 1)}
-            className="md:py-6 sm:text-center md:text-start sm:text-base md:text-base sm:mb-10"
-          >
-            <div className="sm:hidden lg:flex flex-col">
-              My journey started in high school with a web design class that
-              ignited my passion. In 2016, I enrolled in the Year Up United
-              program, completing six months of IT training and earning an
-              internship at General Electric. This pivotal experience launched my career.
-            </div>
-            <br />
-            Close to a decade in my career, I&#39;ve led projects from inception
-            to completion. Starting as a Junior Software Engineer, I became
-            proficient in both{" "}
-            <span className="font-bold text-orange-500"> AWS</span> and
-            <span className="font-bold text-blue-400"> Azure</span> platforms.
-            Promoted to Senior in 2022, providing technical leadership,
-            mentorship, and fostering team success.
-            <br />
-            <br />
-            Over the last few years, I&#39;ve learned to build high-performance,
-            responsive web applications, driven by a commitment to crafting
-            scalable solutions that create meaningful impact and deliver lasting
-            outcomes.
-          </motion.div>
-
-          <Tilt
-            tiltReverse={true}
-            className="flex sm:flex-col  md:flex-row  grid-cols-2 bg-indigo-900 border-2 border-green-500 rounded-[20px] shadow-2xl mb-10 sm:p-8 md:p-0"
-          >
-            <div className="col-span-1 md:border-r-2 border-r-gray-500 md:p-6">
-              <div className=" ">
-                <h4 className="font-bold">Name</h4>
-                <p className="text-green-300">Michael G. Smith</p>
-              </div>
-              <div className="sm:py-4 md:py-2 ">
-                <h4 className="font-bold">Location</h4>
-                <p className="text-green-300">Atlanta, GA</p>
-              </div>
-              <div className=" ">
-                <h4 className="font-bold">Years of Experience</h4>
-                <p className="text-green-300">7+</p>
-              </div>
-            </div>
-
-            <div className="col-span-1 md:p-6">
-              <div className="sm:pt-4 md:pt-0 md:pl-6">
-                <h4 className="font-bold">Sports</h4>
-                <p className="text-green-300">
-                  Basketball, Football, Table Tennis
-                </p>
-              </div>
-              <div className="sm:py-4 md:py-2  md:pl-6">
-                <h4 className="font-bold">Hobbies</h4>
-                <p className="text-green-300">Music, Cooking, Video games</p>
-              </div>
-              <div className="md:pl-6">
-                <h4 className="font-bold">Movies</h4>
-                <p className="text-green-300">Star Wars & Marvel</p>
-              </div>
-            </div>
-          </Tilt>
-          <a
-            href="/cv.pdf"
-            download="MikeGSmith_Resume"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="sm:text-xl md:text-base lg:text-xl font-vt323"
-          >
-            <div className="border border-white flex items-center sm:p-4 lg:px-4 rounded-lg shadow-2xl hover:border-green-400 hover:bg-black transition duration-300">
-              Download CV
-              <div className="ml-2">
-                <GrDownload />
-              </div>
-            </div>
-          </a>
+          {/* Right Container */}
+          <div className="z-2 xs:w-full md:w-1/2 flex flex-col xs:p-6 lg:p-16 xs:pb-16">
+            <h1 className="xs:text-[20px] lg:text-[24px] font-bold mb-8">
+              My Skills
+            </h1>
+            {skills.map((card) => {
+              return (
+                <div
+                  key={card.id}
+                  className="flex flex-wrap md:justify-center md:items-center gap-2 "
+                >
+                  {card.cardItems.map((item, index) => (
+                    <div
+                      key={index}
+                      className="flex p-2 lg:p-4 border-gray-700 border rounded-xl  md:text-[14px] lg:text-base hover:scale-105 transition duration-300 shadow-sm hover:shadow-2xl "
+                    >
+                      <span className={item.color}>{item.icon}</span>
+                      <p className="ml-1 text-xs md:text-[9px] lg:text-xs">
+                        {item.name}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              );
+            })}
+          </div>
         </div>
-        {/* <div className="sm:hidden lg:flex col-span-2 w-full h-full cursor-grab ">
 
-<ComputerModelContainer />
-</div> */}
-
-      </div>
-    </div>
+        <div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]">
+          
+          </div></div>
+        
+    // </div>
   );
 };
 

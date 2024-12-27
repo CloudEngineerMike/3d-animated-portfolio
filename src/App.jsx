@@ -4,8 +4,7 @@ import Header from "./components/header/Header";
 
 const Home = lazy(() => import("./components/home/Home"));
 const WorkEthics = lazy(() => import("./components/ethics/WorkEthics"));
-// const About = lazy(() => import("./components/about/About"));
-const Skills = lazy(() => import("./components/skills/Skills"));
+const About = lazy(() => import("./components/about/About"));
 const Experience = lazy(() => import("./components/experience/Experience"));
 const ProjectCard = lazy(() => import("./components/projectcard/ProjectCard"));
 const Contact = lazy(() => import("./components/contact/Contact"));
@@ -26,6 +25,7 @@ const App = () => {
             </section>
           </LazyLoad>
         </Suspense>
+
         <Suspense fallback={<div>Loading...</div>}>
           <LazyLoad height={"100vh"} offset={-100}>
             <section className="h-full">
@@ -34,18 +34,13 @@ const App = () => {
           </LazyLoad>
         </Suspense>
 
-        {/* <Suspense fallback={<div>loading...</div>}>
-          <LazyLoad height={"100vh"} offset={-100}>
-            <section id="about" className="">
-              <About />
-            </section>
-          </LazyLoad>
-        </Suspense> */}
-
         <Suspense fallback={<div>loading...</div>}>
           <LazyLoad height={"100vh"} offset={-100}>
-            <section id="skills" className="">
-              <Skills />
+            <section
+              id="about"
+              className="h-full lg:h-screen flex justify-center items-center"
+            >
+              <About />
             </section>
           </LazyLoad>
         </Suspense>
@@ -79,9 +74,10 @@ const App = () => {
           </LazyLoad>
         </Suspense>
       </div>
+
       <Suspense fallback={<div>loading...</div>}>
         <LazyLoad height={"100vh"} offset={-100}>
-          <section id="contact" className=" h-full">
+          <section className=" h-full">
             <Footer />
           </section>
         </LazyLoad>
