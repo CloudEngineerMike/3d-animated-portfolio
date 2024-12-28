@@ -42,12 +42,12 @@ import GE from "../assets/ge.png";
 export const navLinks = [
   {
     id: 1,
-    url: "/#home",
+    url: "/",
     label: "Home",
   },
   {
     id: 2,
-    url: "/#about",
+    url: "/about",
     label: "About",
   },
   // {
@@ -57,18 +57,18 @@ export const navLinks = [
   // },
   {
     id: 3,
-    url: "/#experience",
+    url: "/experience",
     label: "Experience",
   },
 
   {
     id: 4,
-    url: "/#projects",
+    url: "/projects",
     label: "Projects",
   },
   {
     id: 5,
-    url: "/#contact",
+    url: "/testimonials",
     label: "Testimonials",
   },
 ];
@@ -76,7 +76,7 @@ export const navLinks = [
 export const ctaButton = [
   {
     id: 1,
-    url: "/#contact",
+    url: "/contact",
     label: "Contact Me",
   },
 ];
@@ -146,16 +146,16 @@ export const skills = [
         icon: <SiAmazondynamodb />,
         color: "text-blue-600",
       },
-      {
-        name: "MySQL",
-        icon: <GrMysql />,
-        color: "text-blue-700",
-      },
-      {
-        name: "Firebase",
-        icon: <IoLogoFirebase />,
-        color: "text-orange-400",
-      },
+      // {
+      //   name: "MySQL",
+      //   icon: <GrMysql />,
+      //   color: "text-blue-700",
+      // },
+      // {
+      //   name: "Firebase",
+      //   icon: <IoLogoFirebase />,
+      //   color: "text-orange-400",
+      // },
       {
         name: "S3",
         icon: <SiAmazons3 />,
@@ -232,11 +232,11 @@ export const skills = [
         icon: <SiGnubash />,
         color: "text-white",
       },
-      {
-        name: "YAML",
-        icon: <SiYaml />,
-        color: "text-red-500",
-      },
+      // {
+      //   name: "YAML",
+      //   icon: <SiYaml />,
+      //   color: "text-red-500",
+      // },
       {
         name: "JSON",
         icon: <LuFileJson2 />,
@@ -247,41 +247,41 @@ export const skills = [
         icon: <GrSwift />,
         color: "text-orange-600",
       },
-      {
-        name: "Figma",
-        icon: <FaFigma />,
-        color: "text-orange-600",
-      },
-      {
-        name: "Canva",
-        icon: <SiCanva />,
-        color: "text-green-600",
-      },
-      {
-        name: "Draw.io",
-        icon: <SiDiagramsdotnet />,
-        color: "text-orange-500",
-      },
-      {
-        name: "VSCode",
-        icon: <VscVscode />,
-        color: "text-blue-500",
-      },
-      {
-        name: "Xcode",
-        icon: <SiXcode />,
-        color: "text-blue-500",
-      },
+      // {
+      //   name: "Figma",
+      //   icon: <FaFigma />,
+      //   color: "text-orange-600",
+      // },
+      // {
+      //   name: "Canva",
+      //   icon: <SiCanva />,
+      //   color: "text-green-600",
+      // },
+      // {
+      //   name: "Draw.io",
+      //   icon: <SiDiagramsdotnet />,
+      //   color: "text-orange-500",
+      // },
+      // {
+      //   name: "VSCode",
+      //   icon: <VscVscode />,
+      //   color: "text-blue-500",
+      // },
+      // {
+      //   name: "Xcode",
+      //   icon: <SiXcode />,
+      //   color: "text-blue-500",
+      // },
       {
         name: "Postman",
         icon: <SiPostman />,
         color: "text-orange-500",
       },
-      {
-        name: "Hostinger",
-        icon: <SiHostinger />,
-        color: "text-indigo-500",
-      },
+      // {
+      //   name: "Hostinger",
+      //   icon: <SiHostinger />,
+      //   color: "text-indigo-500",
+      // },
     ],
   },
 ];
@@ -404,10 +404,11 @@ export const experiences = [
     date: "Jan 2019 - Present",
     pointsColor: "#FFFFFF",
     points: [
-      "Developed and optimized cloud-based solutions for data integration, cross-platform analytics, and automation of key processes across AWS and Azure.",
-      "Led technical initiatives like automated authentication services and employee onboarding pipelines, enhancing efficiency and security.",
-      "Oversaw application migrations, React.Js code audits, and mentoring of junior developers to ensure smooth transitions, quality control, and better team performance.",
-      // "Implemented containerization with Docker and CI/CD pipelines to streamline development workflows, improving productivity and system reliability.",
+      "Developed cloud solutions for data integration, analytics, and process automation while leading secure authentication and onboarding pipelines.",
+
+      "Optimized app migrations, React.js audits, and mentoring, enhancing team performance with containerization and CI/CD workflows.",
+
+      "Improved workflows using Docker, CI/CD, and cross-platform analytics while ensuring quality through technical initiatives and audits.",
     ],
   },
   {
@@ -419,10 +420,9 @@ export const experiences = [
     pointsColor: "text-white",
 
     points: [
+      "Infrastructure build & management tasks, reducing manual intervention and speeding up system deployments across cloud platforms.",
+
       "Designed and deployed cloud-based solutions using Angular, Terraform, and Azure DevOps to improve data accessibility and operational performance.",
-      "Participated in Azure cloud migrations and optimized resource allocation to lower operational costs and enhance infrastructure scalability and security.",
-      "Maintained technical documentation and conducted knowledge transfers to streamline onboarding and increase team productivity.",
-      // "Automated infrastructure management tasks, reducing manual intervention and speeding up system deployments across cloud platforms.",
     ],
   },
   {
@@ -433,9 +433,8 @@ export const experiences = [
     date: "Feb 2017 - Sept 2017",
     pointsColor: "text-white",
     points: [
-      "Assisted in configuring and maintaining Cisco network equipment, including switches and routers, to support network infrastructure.",
-      "Gained hands-on experience with port security, IP protocols, subnetting, and routing, enhancing network performance and security.",
-      "Supported troubleshooting efforts and network optimization, ensuring reliable communication and connectivity across company systems.",
+      "Configured and maintained Cisco equipment, gaining experience in port security, IP protocols, subnetting, routing.",
+      "Supported troubleshooting and optimization, ensuring secure, reliable communication and connectivity across all company systems.",
     ],
   },
   {
@@ -446,9 +445,8 @@ export const experiences = [
     date: "Sept 2016 - July 2017",
     pointsColor: "text-white",
     points: [
-      "Provided technical support for hardware and software, troubleshooting issues, and maintaining systems to ensure smooth operations.",
-      "Gained hands-on experience with computer installations, diagnostics, repairs, and upgrades, contributing to overall system efficiency.",
-      "Delivered support for internal and external clients, honing problem-solving and communication skills in a fast-paced environment.",
+      "Provided comprehensive hardware and software support, including troubleshooting, maintenance, installations, diagnostics, repairs, and upgrades.",
+      "Delivered client support, improving system performance through proactive troubleshooting and enhancing communication skills effectively.",
     ],
   },
 ];

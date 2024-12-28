@@ -1,89 +1,44 @@
-import LazyLoad from "react-lazyload";
-import { lazy, Suspense } from "react";
-import Header from "./components/header/Header";
-
-const Home = lazy(() => import("./components/home/Home"));
-const WorkEthics = lazy(() => import("./components/ethics/WorkEthics"));
-const About = lazy(() => import("./components/about/About"));
-const Experience = lazy(() => import("./components/experience/Experience"));
-const ProjectCard = lazy(() => import("./components/projectcard/ProjectCard"));
-const Contact = lazy(() => import("./components/contact/Contact"));
-const Footer = lazy(() => import("./components/footer/Footer"));
+// import Hero from "./components/hero/Hero";
+import BlobQuestor from "./pages/BlobQuestor";
+import CloudIndexAuth from "./pages/CloudIndexAuth";
+import OnboardingPipeline from "./pages/OnboardingPipeline";
+import CaaptiveSolutions from "./pages/CaaptiveSolutions";
+// import About from "./components/About";
+// import Experience from "./components/experience/Experience";
+// import ProjectCard from "./components/ProjectCard";
+// import Testimonials from "./components/Testimonials";
+// import Contact from "./components/Contact";
+import PageBuilder from "./PageBuilder";
+import {
+  Route,
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+} from "react-router-dom";
+import RootLayout from "./layout/RootLayout";
 
 const App = () => {
-  return (
-    <div className="">
-      <section>
-        <Header />
-      </section>
-
-      <div className=" ">
-        <Suspense fallback={<div>Loading...</div>}>
-          <LazyLoad>
-            <section id="home" className="h-screen container mx-auto px-4">
-              <Home />
-            </section>
-          </LazyLoad>
-        </Suspense>
-
-        <Suspense fallback={<div>Loading...</div>}>
-          <LazyLoad height={"100vh"} offset={-100}>
-            <section className="h-full">
-              <WorkEthics />
-            </section>
-          </LazyLoad>
-        </Suspense>
-
-        <Suspense fallback={<div>loading...</div>}>
-          <LazyLoad height={"100vh"} offset={-100}>
-            <section
-              id="about"
-              className="h-full lg:h-screen flex justify-center items-center"
-            >
-              <About />
-            </section>
-          </LazyLoad>
-        </Suspense>
-
-        <Suspense fallback={<div>loading...</div>}>
-          <LazyLoad height={"100vh"} offset={-100}>
-            <section id="experience" className="h-full">
-              <Experience />
-            </section>
-          </LazyLoad>
-        </Suspense>
-        <Suspense fallback={<div>loading...</div>}>
-          <LazyLoad height={"100vh"} offset={-100}>
-            <section
-              id="projects"
-              className=" h-full flex justify-center items-center"
-            >
-              <ProjectCard />
-            </section>
-          </LazyLoad>
-        </Suspense>
-
-        <Suspense fallback={<div>loading...</div>}>
-          <LazyLoad height={"100vh"} offset={-100}>
-            <section
-              id="contact"
-              className=" xs:h-screen md:h-[700px] lg:h-screen"
-            >
-              <Contact />
-            </section>
-          </LazyLoad>
-        </Suspense>
-      </div>
-
-      <Suspense fallback={<div>loading...</div>}>
-        <LazyLoad height={"100vh"} offset={-100}>
-          <section className=" h-full">
-            <Footer />
-          </section>
-        </LazyLoad>
-      </Suspense>
-    </div>
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<RootLayout />}>
+        <Route index element={<PageBuilder />} />
+        {/* <Route path="about" element={<About />} />
+        <Route path="experience" element={<Experience />} />
+        <Route index element={<ProjectCard />} /> */}
+        {/* <Route path="testimonials" element={<Testimonials />} /> */}
+        {/* <Route path="contact" element={<Contact />} /> */}
+        <Route path="blob-questor" element={<BlobQuestor />} />
+        <Route path="cloud-index-auth" element={<CloudIndexAuth />} />
+        <Route path="onboarding-pipeline" element={<OnboardingPipeline />} />
+        <Route
+          path="caaptive-solutions"
+          element={<CaaptiveSolutions />}
+        />
+      </Route>
+    )
   );
+
+  return <RouterProvider router={router} />;
 };
 
 export default App;
