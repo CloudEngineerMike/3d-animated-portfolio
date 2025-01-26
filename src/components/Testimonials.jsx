@@ -68,12 +68,12 @@ const TestimonialsColumn = (props) => (
         ease: "linear",
         repeatType: "loop",
       }}
-      className="flex items-center flex-col gap-6 pb-6"
+      className="flex items-center flex-col xs:gap-10 md:gap-6 pb-6"
     >
       {[...new Array(2)].fill(0).map((_, index) => (
         <Fragment key={index}>
           {props.testimonials.map(({ id, text, imageSrc, userName, jobTitle }) => (
-            <div key={id} className="card lg:my-2 shadow-lg">
+            <div key={id} className="card lg:my-2 shadow-lg xs:p-6">
               <div className="xs:text-sm lg:text-base">{text}</div>
               <div className="flex items-center gap-2 mt-5">
                 <img
@@ -115,7 +115,7 @@ const Testimonials = () => {
         <div className="xs:hidden md:flex justify-center md:gap-6 mt-10 lg:gap-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[738px] overflow-hidden">
           <TestimonialsColumn testimonials={firstColumn} />
           <TestimonialsColumn testimonials={secondColumn} />
-          <TestimonialsColumn testimonials={thirdColumn} />
+          {/* <TestimonialsColumn testimonials={thirdColumn} /> */}
         </div>
       </div>
     </section>

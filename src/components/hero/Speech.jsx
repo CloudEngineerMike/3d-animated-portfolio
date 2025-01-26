@@ -2,7 +2,7 @@ import { TypeAnimation } from "react-type-animation";
 
 const Speech = () => {
   return (
-    <div className=" leading-2 font-semibold">
+    <div className=" leading-2 font-semibold text-[25px]">
       <TypeAnimation
         sequence={[
           1500, 

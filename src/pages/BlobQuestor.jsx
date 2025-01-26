@@ -1,3 +1,4 @@
+// import { Link } from "react-router-dom";
 import { RiArrowGoBackLine } from "react-icons/ri";
 
 export default function BlobQuestor() {
@@ -50,7 +51,7 @@ export default function BlobQuestor() {
             <RiArrowGoBackLine className="" />
             <a
               className="pl-1 hover:underline underline-offset-2"
-              href="/#projects"
+              href="/"
             >
               Back to Projects
             </a>

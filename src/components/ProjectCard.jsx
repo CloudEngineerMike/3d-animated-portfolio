@@ -1,6 +1,9 @@
+import { HashLink as Link } from 'react-router-hash-link';
+
 const ProjectCard = () => {
   return (
-    <div id="/#projects"
+    <div
+      id="/#projects"
       className="  xs:py-16 inset-0 z-1 h-full w-full bg-white bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px] text-black "
     >
       <div className="flex flex-col justify-center text-center text-black">
@@ -44,11 +47,11 @@ const ProjectCard = () => {
                 </li>
               </ul>
             </div>
-            <a href="/blob-questor" className="">
+            <Link to="/blob-questor" className="">
               <button className="mt-8 w-full bg-indigo-600 text-white  font-semibold tracking-wider xs:text-xs uppercase lg:text-base xs:px-10 p-4 rounded hover:scale-105 transition duration-300 shadow-lg hover:shadow-2xl">
                 Case Study
               </button>
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -79,11 +82,11 @@ const ProjectCard = () => {
                 </li>
               </ul>
             </div>
-            <a href="/cloud-index-auth">
-            <button className="mt-8 w-full bg-indigo-600 text-white  font-semibold tracking-wider xs:text-xs uppercase lg:text-base xs:px-10 p-4 rounded hover:scale-105 transition duration-300 shadow-lg hover:shadow-2xl">
-            Case Study
+            <Link to="/cloud-index-auth">
+              <button className="mt-8 w-full bg-indigo-600 text-white  font-semibold tracking-wider xs:text-xs uppercase lg:text-base xs:px-10 p-4 rounded hover:scale-105 transition duration-300 shadow-lg hover:shadow-2xl">
+                Case Study
               </button>
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -120,11 +123,11 @@ const ProjectCard = () => {
                 </li>
               </ul>
             </div>
-            <a href="/caaptive-solutions">
-            <button className="mt-8 w-full bg-indigo-600 text-white  font-semibold tracking-wider xs:text-xs uppercase lg:text-base xs:px-10 p-4 rounded hover:scale-105 transition duration-300 shadow-lg hover:shadow-2xl">
-            Case Study
+            <Link to="/caaptive-solutions">
+              <button className="mt-8 w-full bg-indigo-600 text-white  font-semibold tracking-wider xs:text-xs uppercase lg:text-base xs:px-10 p-4 rounded hover:scale-105 transition duration-300 shadow-lg hover:shadow-2xl">
+                Case Study
               </button>
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -155,11 +158,11 @@ const ProjectCard = () => {
                 </li>
               </ul>
             </div>
-            <a href="/onboarding-pipeline">
-            <button className="mt-8 w-full bg-indigo-600 text-white  font-semibold tracking-wider xs:text-xs uppercase lg:text-base xs:px-10 p-4 rounded hover:scale-105 transition duration-300 shadow-lg hover:shadow-2xl">
-            Case Study
+            <Link to="/onboarding-pipeline">
+              <button className="mt-8 w-full bg-indigo-600 text-white  font-semibold tracking-wider xs:text-xs uppercase lg:text-base xs:px-10 p-4 rounded hover:scale-105 transition duration-300 shadow-lg hover:shadow-2xl">
+                Case Study
               </button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
